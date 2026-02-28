@@ -170,13 +170,6 @@ Altere grid responsivo em `styles.css` (procure por `grid-template-columns`).
 - ✅ < 100KB total (gzip)
 - ✅ Carrega em < 1s em conexões 3G
 
-## 🔗 Links Úteis
-
-- [Guia Setup GitHub Pages](./SETUP_GITHUB_PAGES.md)
-- [GitHub Pages Docs](https://docs.github.com/en/pages)
-- [Validador HTML](https://validator.w3.org/)
-- [Teste de Performance](https://pagespeed.web.dev/)
-
 ## 👥 Colaboradores
 
 Quer ajudar com o website?
