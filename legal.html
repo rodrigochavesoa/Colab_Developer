@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Política de Privacidade, Termos de Serviço e Licença - STAFF Colab">
+    <title>Privacidade, Termos & Licença - STAFF Colab</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ATOMS */
+        .tab-button {
+            padding: 12px 24px;
+            border: none;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            border-bottom: 3px solid transparent;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .tab-button:hover {
+            background: var(--light);
+        }
+
+        .tab-button.active {
+            border-bottom-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        /* MOLECULES */
+        .legal-section {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .legal-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .legal-article {
+            margin-bottom: 40px;
+        }
+
+        .legal-article h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-light);
+        }
+
+        .legal-article p, .legal-article ul, .legal-article ol {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .legal-article ul, .legal-article ol {
+            margin-left: 20px;
+        }
+
+        .legal-article li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(0, 70, 136, 0.05) 0%, rgba(0, 70, 136, 0.02) 100%);
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .highlight-box strong {
+            color: var(--primary-color);
+        }
+
+        /* ORGANISMS */
+        .legal-container {
+            background: var(--white);
+        }
+
+        .legal-tabs {
+            display: flex;
+            gap: 0;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            background: var(--bg-secondary);
+            padding: 0 20px;
+        }
+
+        .legal-content {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--bg-secondary);
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 18px;
+        }
+
+        .social-link:hover {
+            background: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 12px rgba(0, 70, 136, 0.2);
+        }
+
+        .social-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+
+        @media (max-width: 768px) {
+            .legal-tabs {
+                overflow-x: auto;
+                padding: 0;
+            }
+
+            .tab-button {
+                flex: 1;
+                min-width: 100px;
+            }
+
+            .legal-content {
+                padding: 25px 15px;
+            }
+
+            .legal-article h3 {
+                font-size: 18px;
+            }
+
+            .social-links {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">STAFF Colab ♾️</a>
+            <nav class="nav">
+                <a href="index.html#features">Features</a>
+                <a href="index.html#architecture">Arquitetura</a>
+                <a href="index.html#roadmap">Roadmap</a>
+                <a href="index.html#contact">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Privacidade, Termos & Licença</h1>
+                <p class="subtitle">
+                    Transparência total sobre como protegemos seus dados e o uso do STAFF Colab
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEGAL CONTENT -->
+    <section class="legal-container">
+        <div class="container">
+            <!-- TABS NAVIGATION -->
+            <div class="legal-tabs">
+                <button class="tab-button active" onclick="switchTab('privacy')">
+                    <i class="bi bi-shield-lock"></i> Privacidade
+                </button>
+                <button class="tab-button" onclick="switchTab('terms')">
+                    <i class="bi bi-file-text"></i> Termos de Serviço
+                </button>
+                <button class="tab-button" onclick="switchTab('license')">
+                    <i class="bi bi-code-slash"></i> Licença
+                </button>
+            </div>
+
+            <div class="legal-content">
+                <!-- PRIVACY POLICY -->
+                <div id="privacy" class="legal-section active">
+                    <div class="legal-article">
+                        <h3>🔐 Política de Privacidade</h3>
+                        <p><strong>Última atualização:</strong> 28 de Fevereiro de 2026</p>
+                        <p>No STAFF Colab, sua privacidade é nossa prioridade absoluta. Esta política explica como coletamos, usamos e protegemos seus dados pessoais em conformidade com a LGPD (Lei Geral de Proteção de Dados) e melhores práticas internacionais.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>1. Dados que Coletamos</h3>
+                        <p>Coletamos dados apenas com seu consentimento explícito:</p>
+                        <ul>
+                            <li><strong>Dados de Cadastro:</strong> Nome, email, telefone (opcional)</li>
+                            <li><strong>Dados de Treino:</strong> Histórico de fichas, exercícios realizados, performance (exclusivamente para melhorar personalização)</li>
+                            <li><strong>Dados de Saúde:</strong> Anamnese, lesões, limitações (criptografados em repouso com chave AES-256)</li>
+                            <li><strong>Dados de Uso:</strong> Logs de acesso, tempo de sessão, IP (estritamente para segurança)</li>
+                        </ul>
+                    </div>
+
+                    <div class="highlight-box">
+                        <strong>🛡️ Criptografia de Dados Sensíveis:</strong> Todas as informações de saúde (anamnese) são armazenadas com criptografia AES-256. Mesmo nossa equipe não consegue ler sem a chave pessoal.
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>2. Como Usamos Seus Dados</h3>
+                        <ul>
+                            <li>✓ Personalizar fichas de treino e reabilitação</li>
+                            <li>✓ Melhorar o algoritmo RAG de recomendações</li>
+                            <li>✓ Enviar notificações sobre performance (apenas se consentido)</li>
+                            <li>✓ Análise agregada de dados (sem identificação pessoal)</li>
+                            <li>✓ Prevenir fraudes e abusos do serviço</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>3. Compartilhamento de Dados</h3>
+                        <p><strong>NÃO compartilhamos seus dados com terceiros</strong>, exceto:</p>
+                        <ul>
+                            <li>Com sua autorização explícita</li>
+                            <li>Com provedores de serviço (Supabase, Google Cloud) sob contratos de confidencialidade rigorosos</li>
+                            <li>Por exigência legal (autoridades competentes)</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>4. Retenção de Dados</h3>
+                        <p>Seu dados são mantidos enquanto sua conta estiver ativa. Após solicitação de exclusão:</p>
+                        <ul>
+                            <li>Dados pessoais: Deletados em 7 dias</li>
+                            <li>Histórico de treino: Deletado em 30 dias (permitindo exportação)</li>
+                            <li>Logs de acesso: Mantidos por 90 dias para auditoria de segurança</li>
+                            <li>Backups: Deletados em até 180 dias (por limitações técnicas)</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>5. Seus Direitos (LGPD)</h3>
+                        <p>Você tem direito a:</p>
+                        <ul>
+                            <li>✓ <strong>Confirmação</strong> de coleta de dados</li>
+                            <li>✓ <strong>Acesso</strong> aos seus dados em tempo real</li>
+                            <li>✓ <strong>Correção</strong> de informações imprecisas</li>
+                            <li>✓ <strong>Exportação</strong> dos dados em formato aberto (CSV, JSON)</li>
+                            <li>✓ <strong>Exclusão</strong> completa ("direito ao esquecimento")</li>
+                            <li>✓ <strong>Revogação</strong> de consentimento a qualquer momento</li>
+                        </ul>
+                        <p><strong>Para exercer esses direitos:</strong> contacte <code>privacidade@staffcolab.com</code></p>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>6. Segurança</h3>
+                        <ul>
+                            <li>🔒 Conexão HTTPS/TLS 1.3 em todas as requisições</li>
+                            <li>🔒 Senhas armazenadas com bcrypt (algoritmo irreversível)</li>
+                            <li>🔒 Autenticação multi-fator (MFA) disponível</li>
+                            <li>🔒 Rate limiting contra ataques de força bruta</li>
+                            <li>🔒 Auditorias de segurança regulares (pen-testing anual)</li>
+                            <li>🔒 Conformidade com OWASP Top 10</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>7. Cookies & Rastreamento</h3>
+                        <p>Usamos cookies apenas para:</p>
+                        <ul>
+                            <li>Manter sua sessão autenticada (sessão_id)</li>
+                            <li>Preferências de interface (dark_mode, idioma)</li>
+                            <li>Analytics agregado (apenas contadores, sem rastreamento individual)</li>
+                        </ul>
+                        <p><strong>Não usamos</strong> cookies de rastreamento de terceiros.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>8. Contato - Dados Pessoais</h3>
+                        <p><strong>Encarregado de Dados Pessoais (DPO):</strong></p>
+                        <ul>
+                            <li>Email: <code>atendimento@rcstorestaff.com.br</code></li>
+                            <li>Resposta em até 10 dias úteis</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- TERMS OF SERVICE -->
+                <div id="terms" class="legal-section">
+                    <div class="legal-article">
+                        <h3>⚖️ Termos de Serviço</h3>
+                        <p><strong>Última atualização:</strong> 28 de Fevereiro de 2026</p>
+                        <p>Ao usar STAFF Colab, você concorda com estes Termos de Serviço. Leia-os cuidadosamente.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>1. Aceitação dos Termos</h3>
+                        <p>Ao acessar ou usar STAFF Colab, você concorda em ficar vinculado por estes Termos. Se você não concorda, não use o serviço. Reservamo-nos o direito de modificar estes Termos a qualquer momento, com notificação prévia.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>2. Licença de Uso</h3>
+                        <p>Concedemos a você uma licença limitada, não-exclusiva e revogável para usar STAFF Colab:</p>
+                        <ul>
+                            <li>✓ Apenas para fins pessoais ou educacionais</li>
+                            <li>✓ Sem modificação ou engenharia reversa</li>
+                            <li>✓ Sem redistribuição ou venda</li>
+                            <li>✓ Respeitando a privacidade de outros usuários</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>3. Conta e Responsabilidades</h3>
+                        <p><strong>Você é responsável por:</strong></p>
+                        <ul>
+                            <li>Manter a segurança da sua senha</li>
+                            <li>Todas as atividades sob sua conta</li>
+                            <li>Informações precisas na anamnese</li>
+                            <li>Não compartilhar dados de outros usuários</li>
+                        </ul>
+                    </div>
+
+                    <div class="highlight-box">
+                        <strong>⚠️ Aviso Médico:</strong> STAFF Colab NÃO é substituto para aconselhamento médico profissional. Sempre consulte um profissional qualificado antes de iniciar qualquer programa de exercícios, especialmente se tiver condições de saúde.
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>4. Usos Proibidos</h3>
+                        <p>Você concorda em não usar STAFF Colab para:</p>
+                        <ul>
+                            <li>✗ Atividades ilegais ou não-autorizadas</li>
+                            <li>✗ Acesso não-autorizado a sistemas</li>
+                            <li>✗ Distribuição de malware ou conteúdo prejudicial</li>
+                            <li>✗ Spam, phishing ou fraude</li>
+                            <li>✗ Violação de direitos autorais ou propriedade intelectual</li>
+                            <li>✗ Assédio, ameaças ou difamação</li>
+                            <li>✗ Venda de dados ou engenharia reversa</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>5. Propriedade Intelectual</h3>
+                        <p>STAFF Colab e todo seu conteúdo são propriedade intelectual. Você retém direitos sobre:</p>
+                        <ul>
+                            <li>✓ Dados pessoais e fichas criadas</li>
+                            <li>✓ Comentários e feedback que você fornece</li>
+                        </ul>
+                        <p>Ao fornecer feedback, você nos concede licença para usá-lo em melhorias do serviço.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>6. Limitação de Responsabilidade</h3>
+                        <p>STAFF Colab é fornecido "no estado em que se encontra" (as-is). Não garantimos:</p>
+                        <ul>
+                            <li>Disponibilidade contínua (tempo de atividade de 99.5%)</li>
+                            <li>Resultados específicos de treino</li>
+                            <li>Ausência de erros ou bugs</li>
+                            <li>Compatibilidade com todos os dispositivos</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>7. Garantia de Não-Responsabilidade</h3>
+                        <p>Em nenhum caso STAFF Colab será responsável por:</p>
+                        <ul>
+                            <li>Lesões, danos corporais ou morte</li>
+                            <li>Perda de dados ou dados corrompidos</li>
+                            <li>Perdas financeiras ou consequentes</li>
+                            <li>Falhas causadas por força maior</li>
+                        </ul>
+                        <p><strong>Sua responsabilidade ao usar:</strong> Máximo ao valor pago (se aplicável) nos últimos 30 dias.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>8. Encerramento</h3>
+                        <p>Você pode encerrar sua conta a qualquer momento. Nós podemos encerrar se:</p>
+                        <ul>
+                            <li>Violação dos Termos</li>
+                            <li>Atividade maliciosa detectada</li>
+                            <li>Não-conformidade com leis aplicáveis</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>9. Lei Aplicável</h3>
+                        <p>Estes Termos são regidos pelas leis da <strong>República Federativa do Brasil</strong>. Qualquer disputa será resolvida nos tribunais competentes de São Paulo, SP.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>10. Contato</h3>
+                        <p>Para dúvidas sobre estes Termos, contacte-nos em <code>atendimento@rcstorestaff.com.br</code></p>
+                    </div>
+                </div>
+
+                <!-- LICENSE -->
+                <div id="license" class="legal-section">
+                    <div class="legal-article">
+                        <h3>📜 Licença</h3>
+                        <p><strong>Última atualização:</strong> 28 de Fevereiro de 2026</p>
+                        <p>STAFF Colab é um projeto colaborativo que combina múltiplas licenças para diferentes componentes.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>1. Código-Fonte (Software)</h3>
+                        <p><strong>Licença:</strong> MIT License</p>
+                        <div class="highlight-box">
+                            MIT License Text:<br><br>
+                            Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:<br><br>
+                            The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+                        </div>
+                        <p><strong>O que isso significa:</strong></p>
+                        <ul>
+                            <li>✓ Livre para usar comercialmente ou pessoalmente</li>
+                            <li>✓ Livre para modificar e distribuir</li>
+                            <li>✓ Sem garantias (use por conta própria risco)</li>
+                            <li>✓ Deve incluir copyright e notificação de licença</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>2. Documentação</h3>
+                        <p><strong>Licença:</strong> Creative Commons Attribution 4.0 (CC-BY-4.0)</p>
+                        <p><strong>O que isso significa:</strong></p>
+                        <ul>
+                            <li>✓ Livre para compartilhar, remixar e adaptar</li>
+                            <li>✓ Deve creditar o autor original (Rodrigo Chaves)</li>
+                            <li>✓ Sem restrições comerciais</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>3. Arquivos de Dados & Exercícios</h3>
+                        <p><strong>Status:</strong> Propriedade Intelectual Exclusiva</p>
+                        <p>Base de exercícios, fórmulas de periodização (Jack Daniels) e algoritmos de personalização:</p>
+                        <ul>
+                            <li>❌ Não é permitida redistribuição</li>
+                            <li>✓ Pode usar dentro da plataforma STAFF Colab</li>
+                            <li>✓ Pode exportar para uso pessoal</li>
+                            <li>❌ Proibido comercializar sem autorização</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>4. Dependências de Terceiros</h3>
+                        <p>STAFF Colab usa as seguintes bibliotecas de código aberto:</p>
+                        <ul>
+                            <li><strong>Flask:</strong> BSD License</li>
+                            <li><strong>PostgreSQL:</strong> PostgreSQL License (similar ao BSD)</li>
+                            <li><strong>LangChain:</strong> MIT License</li>
+                            <li><strong>FAISS:</strong> MIT License</li>
+                            <li><strong>ChromaDB:</strong> Apache 2.0</li>
+                            <li><strong>Next.js:</strong> MIT License</li>
+                            <li><strong>React Native:</strong> MIT License</li>
+                        </ul>
+                        <p>Todas as licenças são compatíveis com comercialização responsável.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>5. Créditos & Atribuições</h3>
+                        <p><strong>Criador Principal:</strong></p>
+                        <ul>
+                            <li>👨‍💻 Rodrigo Chaves Oliveira (6+ anos em Educação Física + Dev)</li>
+                        </ul>
+                        <p><strong>Fórmulas & Algoritmos:</strong></p>
+                        <ul>
+                            <li>🏃 "Running Formula" - Jack Daniels (citado e respeitado)</li>
+                            <li>💪 Princípios de Periodização - Lyle McDonald, Israetel</li>
+                            <li>🤖 Modelo de IA - Google Gemini 2.5 Flash, OpenAI</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>6. Suas Contribuições</h3>
+                        <p>Se você contribuir para STAFF Colab (código, documentação, dados):</p>
+                        <ul>
+                            <li>✓ Você mantém a propriedade intelectual das contribuições</li>
+                            <li>✓ Você concede ao projeto licença perpétua, irrevogável para usar</li>
+                            <li>✓ Suas contribuições serão creditadas no repositório</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>7. Modificações de Licença</h3>
+                        <p>O projeto pode mudar licenças em versões futuras, mas:</p>
+                        <ul>
+                            <li>✓ Versões anteriores mantêm licença original</li>
+                            <li>✓ Notificação mínima de 90 dias antes de mudança</li>
+                            <li>✓ Compatibilidade com padrões de código aberto mantida</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>8. Propriedade de Marca</h3>
+                        <p><strong>STAFF Colab™</strong> é marca registrada.</p>
+                        <ul>
+                            <li>❌ Não permi redistribuição com nome "STAFF Colab"</li>
+                            <li>✓ Forks devem mudar nome (ex: "STAFF Colab - Modificado por...")</li>
+                            <li>✓ Logos e identidade visual: CC-BY-4.0 com atribuição</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>9. Suporte & Comunidade</h3>
+                        <p>Quer contribuir? Nossos canais:</p>
+                        <div class="social-links">
+                            <span class="social-text">Conecte-se:</span>
+                            <a href="https://github.com/rodrigochavesoa" class="social-link" title="GitHub">
+                                <i class="bi bi-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/rodrigochavesoa" class="social-link" title="LinkedIn">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="https://behance.net/rodrigochavesoa" class="social-link" title="Behance">
+                                <i class="bi bi-briefcase"></i>
+                            </a>
+                            <a href="https://instagram.com/pontochavedesign" class="social-link" title="Instagram">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>10. Mudanças & Atualizações</h3>
+                        <p>Esta licença foi última atualizada em 28 de Fevereiro de 2026. Mudanças futuras serão notificadas através de:</p>
+                        <ul>
+                            <li>📧 Email (para usuários cadastrados)</li>
+                            <li>📝 Changelog no repositório GitHub</li>
+                            <li>🔔 Notificação no website</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>STAFF Colab ♾️</h4>
+                    <p>Treino Inteligente. Evolução Contínua.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Comunidade</h4>
+                    <ul>
+                        <li><a href="https://github.com/rodrigochavesoa" target="_blank"><i class="bi bi-github"></i> GitHub</a></li>
+                        <li><a href="https://linkedin.com/in/rodrigochavesoa" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="https://behance.net/rodrigochavesoa" target="_blank"><i class="bi bi-briefcase"></i> Behance</a></li>
+                        <li><a href="https://instagram.com/pontochavedesign" target="_blank"><i class="bi bi-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="legal.html#privacy">Privacidade</a></li>
+                        <li><a href="legal.html#terms">Termos</a></li>
+                        <li><a href="legal.html#license">Licença</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li>📧 <a href="mailto:atendimento@rcstorestaff.com.br">atendimento@rcstorestaff.com.br</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 style="font-size: 13px; font-weight: 500; opacity: 0.8;">Direitos & Licença</h4>
+                    <p style="font-size: 12px; line-height: 1.6;">
+                        &copy; 2026 STAFF Colab ♾️. Todos os direitos reservados.
+                    </p>
+                    <p style="font-size: 12px; line-height: 1.6;">
+                        Licenciado sob MIT + CC-BY-4.0. Repositório privado • Acesso restrito a colaboradores.
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom" style="display: none;">
+                <p>&copy; 2026 STAFF Colab ♾️. Todos os direitos reservados.</p>
+                <p>Licenciado sob MIT + CC-BY-4.0. Repositório privado • Acesso restrito a colaboradores.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function switchTab(tabName) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.legal-section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(button => button.classList.remove('active'));
+
+            // Show selected section
+            document.getElementById(tabName).classList.add('active');
+
+            // Add active class to clicked button
+            event.target.classList.add('active');
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

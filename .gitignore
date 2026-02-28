@@ -1,4 +1,3 @@
-# Ignore everything except the gitignore and index.html
-*
-!.gitignore
-!index.html
+# Ignore all Markdown files except README.md
+*.md
+!README.md
