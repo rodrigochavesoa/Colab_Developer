@@ -5,11 +5,13 @@ Este diretório contém o **website público** da plataforma Beta Staff, hospeda
 ## 📁 Estrutura
 
 ```
-website/
+STAFF-Colab
+├── .gitignore                  # gitignore padrão
+├── favicon.svg                 # favicons
 ├── index.html                  # Landing page principal
+├── legal.html                  # Landing page secundária
 ├── styles.css                  # Estilos responsivos
 ├── scripts.js                  # JavaScript interativo
-├── SETUP_GITHUB_PAGES.md       # Guia de configuração
 └── README.md                   # Este arquivo
 ```
 
