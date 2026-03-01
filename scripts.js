@@ -31,8 +31,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('.contact-form form');
     if (form) {
         form.addEventListener('submit', function(e) {
+            // Validar reCAPTCHA antes de enviar
+            const recaptchaResponse = grecaptcha.getResponse();
+            
+            if (!recaptchaResponse) {
+                e.preventDefault();
+                alert('Por favor, complete o desafio reCAPTCHA antes de enviar o formulário.');
+                return false;
+            }
+            
             // Allow normal form submission to Formspree
-            console.log('Formulário enviado para Formspree');
+            console.log('Formulário validado e enviado para Formspree');
         });
     }
 });
