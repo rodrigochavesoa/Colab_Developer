@@ -537,3 +537,38 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// ========================================
+// DIAGRAM COLLAPSE/EXPAND TOGGLE
+// ========================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    const diagramToggle = document.getElementById('diagramToggle');
+    const diagramBox = document.querySelector('.diagram-box');
+    const architectureDiagram = document.getElementById('architectureDiagram');
+    
+    if (diagramToggle && diagramBox) {
+        diagramToggle.addEventListener('click', function() {
+            const isExpanded = diagramBox.classList.contains('diagram-expanded');
+            
+            if (isExpanded) {
+                // Recolher
+                diagramBox.classList.remove('diagram-expanded');
+                diagramBox.classList.add('diagram-collapsed');
+                diagramToggle.setAttribute('aria-expanded', 'false');
+                diagramToggle.querySelector('span').textContent = 'Mostrar mais';
+                
+                // Scroll suave para o topo do diagrama
+                setTimeout(() => {
+                    architectureDiagram.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 200);
+            } else {
+                // Expandir
+                diagramBox.classList.remove('diagram-collapsed');
+                diagramBox.classList.add('diagram-expanded');
+                diagramToggle.setAttribute('aria-expanded', 'true');
+                diagramToggle.querySelector('span').textContent = 'Mostrar menos';
+            }
+        });
+    }
+});
+

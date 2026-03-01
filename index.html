@@ -292,9 +292,9 @@
                 </div>
             </div>
 
-            <div class="architecture-diagram">
+            <div class="architecture-diagram" id="architectureDiagram">
                 <h3>Fluxo Técnico da Arquitetura - RAG + Generative AI</h3>
-                <div class="diagram-box">
+                <div class="diagram-box diagram-collapsed">
                     <pre>┌─────────────────────────────────────────────────────────────────┐
 │                    Frontend (Jinja2 + Vanilla JS)                  │
 │                    ├─ form_input() [Anamnese/Objetivos]           │
@@ -360,8 +360,13 @@
     │ SQLite  │   │PDF Export│   │API Response  │
     │  Save   │   │(ReportLab)  │(JSON + JWT)  │
     │ ficha   │   │          │   │              │
-    └────────┘    └──────────┘   └──────────────┘
-        </div>
+    └────────┘    └──────────┘   └──────────────┘</pre>
+                </div>
+                <button class="diagram-toggle-btn" id="diagramToggle" aria-expanded="false" aria-controls="architectureDiagram">
+                    <i class="bi bi-chevron-down"></i>
+                    <span>Mostrar mais</span>
+                </button>
+            </div>
     </section>
 
     <!-- ROADMAP -->

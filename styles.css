@@ -818,6 +818,81 @@ a:hover {
     word-wrap: break-word;
 }
 
+/* Diagram Collapse/Expand */
+.diagram-box {
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+
+.diagram-box.diagram-collapsed {
+    max-height: 280px;
+    overflow: hidden;
+    position: relative;
+}
+
+.diagram-box.diagram-collapsed::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(to bottom, rgba(31, 41, 55, 0), rgba(31, 41, 55, 0.9));
+    pointer-events: none;
+    border-radius: 0 0 8px 8px;
+}
+
+.diagram-box.diagram-expanded {
+    max-height: none;
+}
+
+.diagram-toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px 16px;
+    margin-top: 16px;
+    background: rgba(129, 140, 248, 0.1);
+    border: 1px solid rgba(129, 140, 248, 0.3);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    color: #818cf8;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.diagram-toggle-btn:hover {
+    background: rgba(129, 140, 248, 0.2);
+    border-color: rgba(129, 140, 248, 0.5);
+}
+
+.diagram-toggle-btn i {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+}
+
+.diagram-toggle-btn[aria-expanded="true"] i {
+    transform: rotate(180deg);
+}
+
+/* Desktop: Show full diagram without collapse */
+@media (min-width: 992px) {
+    .diagram-box.diagram-collapsed {
+        max-height: none;
+    }
+
+    .diagram-box.diagram-collapsed::after {
+        display: none;
+    }
+
+    .diagram-toggle-btn {
+        display: none;
+    }
+}
+
 /* Architecture Responsiveness - Mobile First */
 @media (max-width: 575px) {
     .architecture {
