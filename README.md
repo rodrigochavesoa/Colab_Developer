@@ -1,6 +1,6 @@
-# 🌐 Website Público - Beta Staff
+# 🌐 Website Público - Colab Developer
 
-Este diretório contém o **website público** da plataforma Beta Staff, hospedado em GitHub Pages.
+Este diretório contém o **website público** da plataforma Colab Developer, hospedado em GitHub Pages.
 
 ## 📁 Estrutura
 
