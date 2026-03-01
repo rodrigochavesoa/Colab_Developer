@@ -622,6 +622,68 @@ a:hover {
     }
 }
 
+/* STAFF APP Showcase - Responsive Image */
+.staff-app-showcase {
+    margin: 40px 0 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 70, 136, 0.12);
+}
+
+.staff-app-image {
+    width: 100%;
+    height: auto;
+    max-width: 900px;
+    display: block;
+    object-fit: contain;
+    transition: var(--transition);
+    border-radius: 12px;
+}
+
+.staff-app-image:hover {
+    box-shadow: 0 8px 30px rgba(0, 70, 136, 0.2);
+    filter: brightness(1.02);
+}
+
+/* MOBILE: Staff App Showcase */
+@media (max-width: 575px) {
+    .staff-app-showcase {
+        margin: 30px 0 40px 0;
+        border-radius: 8px;
+    }
+    
+    .staff-app-image {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+}
+
+/* TABLET: Staff App Showcase */
+@media (min-width: 576px) and (max-width: 991px) {
+    .staff-app-showcase {
+        margin: 35px 0 50px 0;
+    }
+    
+    .staff-app-image {
+        max-width: 95%;
+    }
+}
+
+/* TV/LARGE SCREENS: Staff App Showcase */
+@media (min-width: 1400px) {
+    .staff-app-showcase {
+        margin: 50px 0 70px 0;
+    }
+    
+    .staff-app-image {
+        max-width: 1000px;
+    }
+}
+
 /* ========================================
    ARCHITECTURE
    ======================================== */
