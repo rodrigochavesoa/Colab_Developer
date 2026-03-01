@@ -137,10 +137,33 @@ a:hover {
     color: var(--primary-color);
 }
 
+.theme-toggle-header {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle-header:hover {
+    background: var(--bg-secondary);
+    color: var(--primary-color);
+}
+
 @media (max-width: 768px) {
     .nav {
         gap: 15px;
         font-size: 14px;
+    }
+    
+    .theme-toggle-header {
+        display: none;
     }
     
     .logo {
@@ -1381,3 +1404,657 @@ a:hover {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--primary-dark);
 }
+
+/* ========================================
+   BOTTOM TAB BAR - ATOMIC COMPONENTS
+   ======================================== */
+
+/* DESKTOP: Hide bottom tab bar */
+@media (min-width: 992px) {
+    .bottom-tab-bar,
+    .more-menu {
+        display: none !important;
+    }
+}
+
+/* Atoms: Basic structure */
+.bottom-tab-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    background: var(--white);
+    border-top: 2px solid var(--border);
+    padding: 0;
+    height: 70px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+    z-index: 99;
+    gap: 0;
+}
+
+/* Atoms: Tab item base */
+.tab-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: 100%;
+    text-decoration: none;
+    color: var(--text-secondary);
+    transition: var(--transition);
+    gap: 4px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 0;
+}
+
+.tab-item:active,
+.tab-item.active {
+    color: var(--primary-color);
+    background: rgba(0, 70, 136, 0.05);
+}
+
+/* Atoms: Tab icon */
+.tab-icon {
+    font-size: 24px;
+    display: block;
+    line-height: 1;
+    transition: var(--transition);
+}
+
+/* Atoms: Tab label */
+.tab-label {
+    display: block;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+/* Molecule: More button */
+.tab-more {
+    color: var(--text-secondary);
+}
+
+.tab-more.active {
+    color: var(--primary-color);
+}
+
+/* MOBILE: Tab bar responsive */
+@media (max-width: 575px) {
+    .bottom-tab-bar {
+        height: 65px;
+    }
+    
+    .tab-label {
+        font-size: 10px;
+    }
+    
+    .tab-icon {
+        font-size: 22px;
+    }
+}
+
+/* ========================================
+   MORE MENU - ATOMIC COMPONENTS
+   ======================================== */
+
+.more-menu {
+    position: fixed;
+    bottom: 70px;
+    right: 15px;
+    background: var(--white);
+    border-radius: var(--btn-radius);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    z-index: 98;
+    min-width: 200px;
+    animation: slideUp 0.2s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.more-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: var(--text-primary);
+    text-decoration: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: var(--transition);
+    border-bottom: 1px solid var(--border);
+    width: 100%;
+    text-align: left;
+}
+
+.more-item:last-child {
+    border-bottom: none;
+}
+
+.more-item:hover {
+    background: var(--bg-secondary);
+    color: var(--primary-color);
+    padding-left: 20px;
+}
+
+.more-item i {
+    font-size: 16px;
+    width: 20px;
+}
+
+/* MOBILE: More menu responsive */
+@media (max-width: 575px) {
+    .more-menu {
+        bottom: 65px;
+        right: 10px;
+        min-width: 180px;
+    }
+    
+    .more-item {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+}
+
+/* ========================================
+   COMMAND BAR - ATOMIC COMPONENTS
+   ======================================== */
+
+/* Overlay behind command bar */
+.command-bar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.15s ease-out;
+    z-index: 100;
+    display: block;
+}
+
+.command-bar-overlay[hidden] {
+    display: none !important;
+    pointer-events: none !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Main command bar container */
+.command-bar {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    max-height: 60vh;
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    animation: scaleIn 0.15s ease-out;
+}
+
+.command-bar[hidden] {
+    display: none !important;
+    pointer-events: none !important;
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Atoms: Command bar header */
+.command-bar-header {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    gap: 10px;
+}
+
+/* Atoms: Command input */
+.command-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    color: var(--text-primary);
+    font-family: inherit;
+    outline: none;
+    padding: 8px 0;
+}
+
+.command-input::placeholder {
+    color: var(--text-secondary);
+}
+
+/* Atoms: Command hint (ESC) */
+.command-hint {
+    background: var(--bg-secondary);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    opacity: 0.6;
+    white-space: nowrap;
+}
+
+/* Molecules: Command results */
+.command-results {
+    overflow-y: auto;
+    max-height: calc(60vh - 60px);
+    padding: 8px 0;
+}
+
+.command-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    background: transparent;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.command-item:hover,
+.command-item.active {
+    background: var(--bg-secondary);
+    color: var(--primary-color);
+    padding-left: 24px;
+}
+
+.command-item-icon {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+}
+
+.command-item-label {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.command-item-text {
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+.command-item-shortcut {
+    font-size: 11px;
+    color: var(--text-secondary);
+    opacity: 0.6;
+}
+
+/* MOBILE: Command bar responsive */
+@media (max-width: 575px) {
+    .command-bar {
+        width: 95%;
+        max-height: 70vh;
+        top: 40%;
+    }
+    
+    .command-bar-header {
+        padding: 14px 16px;
+    }
+    
+    .command-input {
+        font-size: 14px;
+    }
+    
+    .command-item {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+}
+
+/* ========================================
+   CTRL+K HINT TOOLTIP
+   ======================================== */
+
+.ctrl-k-hint {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background: var(--white);
+    border-radius: var(--btn-radius);
+    box-shadow: 0 4px 20px rgba(0, 70, 136, 0.2);
+    padding: 16px 18px;
+    z-index: 90;
+    max-width: 280px;
+    border-left: 4px solid var(--primary-color);
+    animation: slideInRight 0.3s ease-out;
+    opacity: 0;
+}
+
+.ctrl-k-hint.show {
+    opacity: 1;
+}
+
+.ctrl-k-hint.hide {
+    animation: slideOutRight 0.3s ease-out;
+    opacity: 0;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+}
+
+.hint-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+.hint-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.hint-text {
+    flex: 1;
+    line-height: 1.4;
+}
+
+.hint-text kbd {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 3px 6px;
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.hint-close {
+    flex-shrink: 0;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.hint-close:hover {
+    color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+/* MOBILE: Ctrl+K hint */
+@media (max-width: 575px) {
+    .ctrl-k-hint {
+        bottom: 80px;
+        right: 10px;
+        left: 10px;
+        max-width: none;
+    }
+}
+
+/* ========================================
+   DARK MODE STYLES
+   ======================================== */
+
+[data-theme="dark"],
+.dark-mode {
+    color-scheme: dark;
+}
+
+.dark-mode {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1f2937;
+    --bg-tertiary: #374151;
+    --text-primary: #e5e7eb;
+    --text-secondary: #9ca3af;
+    --border: #4b5563;
+    --white: #1f2937;
+}
+
+.dark-mode body,
+.dark-mode .header,
+.dark-mode .hero,
+.dark-mode .features,
+.dark-mode .architecture,
+.dark-mode .roadmap,
+.dark-mode .contact,
+.dark-mode .footer {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.dark-mode .feature-card,
+.dark-mode .tech-group,
+.dark-mode .contact-card,
+.dark-mode .phase {
+    background: var(--bg-secondary);
+    border-color: var(--border);
+    color: var(--text-primary);
+}
+
+.dark-mode .phase.completed {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, rgba(34, 197, 94, 0.08) 100%);
+    border-color: #22c55e;
+}
+
+.dark-mode .phase.in-progress {
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.15) 0%, rgba(234, 179, 8, 0.08) 100%);
+    border-color: #eab308;
+}
+
+.dark-mode .phase.planned {
+    background: var(--bg-secondary);
+    border-color: var(--border);
+}
+
+.dark-mode .command-bar,
+.dark-mode .more-menu,
+.dark-mode .ctrl-k-hint {
+    background: var(--bg-secondary);
+    border-color: var(--border);
+}
+
+.dark-mode .feature-card:hover,
+.dark-mode .command-bar:hover {
+    background: var(--bg-tertiary);
+}
+
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border-color: var(--border);
+}
+
+.dark-mode .command-item:hover,
+.dark-mode .command-item.active {
+    background: var(--bg-tertiary);
+}
+
+.dark-mode .more-item:hover {
+    background: var(--bg-tertiary);
+}
+
+.dark-mode .phase h4 {
+    color: var(--text-primary);
+}
+
+.dark-mode .phase code {
+    color: #4ade80;
+}
+
+.dark-mode .phase p,
+.dark-mode .phase ul li {
+    color: var(--text-secondary);
+}
+
+.dark-mode .header {
+    background: var(--bg-secondary);
+    border-bottom-color: var(--border);
+}
+
+.dark-mode .theme-toggle-header {
+    color: var(--text-primary);
+}
+
+.dark-mode .theme-toggle-header:hover {
+    background: var(--bg-tertiary);
+    color: #fbbf24;
+}
+
+.dark-mode a {
+    color: #60a5fa;
+}
+
+.dark-mode a:hover {
+    color: #93c5fd;
+}
+
+.dark-mode .footer-section a {
+    color: #60a5fa;
+}
+
+.dark-mode .footer-section a:hover {
+    color: #93c5fd;
+}
+
+.dark-mode .contact-card {
+    background: var(--bg-secondary);
+}
+
+.dark-mode .contact-card h4 {
+    color: var(--text-primary);
+}
+
+/* Dark Mode Buttons */
+.dark-mode .btn-success {
+    background-color: #22c55e;
+    color: white;
+}
+
+.dark-mode .btn-success:hover {
+    background-color: #16a34a;
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.4);
+}
+
+.dark-mode .btn-secondary {
+    background-color: #6b7280;
+    color: white;
+}
+
+.dark-mode .btn-secondary:hover {
+    background-color: #4b5563;
+    box-shadow: 0 4px 12px rgba(107, 114, 128, 0.4);
+}
+
+.dark-mode .btn-warning {
+    background-color: #fbbf24;
+    color: #1f2937;
+}
+
+.dark-mode .btn-warning:hover {
+    background-color: #f59e0b;
+    color: #1f2937;
+}
+
+.dark-mode .btn-danger {
+    background-color: #ef4444;
+    color: white;
+}
+
+.dark-mode .btn-danger:hover {
+    background-color: #dc2626;
+}
+
+/* ========================================
+   LAYOUT ADJUSTMENT FOR BOTTOM TAB BAR
+   ======================================== */
+
+/* Only apply bottom padding on mobile */
+@media (max-width: 991px) {
+    body {
+        padding-bottom: 70px;
+    }
+    
+    @media (max-width: 575px) {
+        body {
+            padding-bottom: 65px;
+        }
+    }
+}
+
+

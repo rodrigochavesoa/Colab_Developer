@@ -24,6 +24,9 @@
                 <a href="#architecture">Arquitetura</a>
                 <a href="#roadmap">Roadmap</a>
                 <a href="#contact">Contato</a>
+                <button class="theme-toggle-header" id="themeToggleHeader" aria-label="Alternar tema" title="Alternar entre Light/Dark">
+                    <i class="bi bi-moon"></i>
+                </button>
             </nav>
         </div>
     </header>
@@ -599,6 +602,67 @@
             </div>
         </div>
     </footer>
+
+    <!-- BOTTOM TAB BAR (Mobile Navigation) -->
+    <nav class="bottom-tab-bar" id="bottomTabBar">
+        <a href="#features" class="tab-item" data-section="features" aria-label="Features">
+            <span class="tab-icon">🏠</span>
+            <span class="tab-label">Features</span>
+        </a>
+        <a href="#architecture" class="tab-item" data-section="architecture" aria-label="Arquitetura">
+            <span class="tab-icon">🏗️</span>
+            <span class="tab-label">Stack</span>
+        </a>
+        <a href="#roadmap" class="tab-item" data-section="roadmap" aria-label="Roadmap">
+            <span class="tab-icon">📋</span>
+            <span class="tab-label">Roadmap</span>
+        </a>
+        <a href="#contact" class="tab-item" data-section="contact" aria-label="Contato">
+            <span class="tab-icon">💬</span>
+            <span class="tab-label">Contato</span>
+        </a>
+        <button class="tab-item tab-more" id="tabMore" aria-label="Mais opções" aria-expanded="false" aria-controls="moreMenu">
+            <span class="tab-icon">⋯</span>
+            <span class="tab-label">Mais</span>
+        </button>
+    </nav>
+
+    <!-- MORE MENU (Dropdown for additional options) -->
+    <div class="more-menu" id="moreMenu" hidden>
+        <a href="legal.html#privacy" class="more-item">
+            <i class="bi bi-shield-lock"></i>
+            <span>Privacidade</span>
+        </a>
+        <a href="legal.html#terms" class="more-item">
+            <i class="bi bi-file-text"></i>
+            <span>Termos</span>
+        </a>
+        <a href="https://github.com/rodrigochavesoa" target="_blank" class="more-item" rel="noopener noreferrer">
+            <i class="bi bi-github"></i>
+            <span>GitHub</span>
+        </a>
+        <button class="more-item" id="themeToggle" aria-label="Alternar tema escuro">
+            <i class="bi bi-moon"></i>
+            <span>Tema Escuro</span>
+        </button>
+    </div>
+
+    <!-- COMMAND BAR (CMD + K) -->
+    <div class="command-bar-overlay" id="commandBarOverlay" hidden></div>
+    <div class="command-bar" id="commandBar" hidden>
+        <div class="command-bar-header">
+            <input 
+                type="text" 
+                class="command-input" 
+                id="commandInput" 
+                placeholder="Ir para..." 
+                autocomplete="off"
+                aria-label="Buscar comandos"
+            >
+            <span class="command-hint">ESC</span>
+        </div>
+        <div class="command-results" id="commandResults"></div>
+    </div>
 
     <script src="scripts.js"></script>
 </body>
