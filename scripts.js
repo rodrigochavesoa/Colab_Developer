@@ -2,38 +2,18 @@
 // SMOOTH SCROLL & ACTIVE NAV
 // ========================================
 
-// reCAPTCHA Enterprise callback function
+// reCAPTCHA v2 Checkbox callback function
 function onRecaptchaSuccess(token) {
-    document.getElementById('recaptchaToken').value = token;
-    document.getElementById('submitBtn').disabled = false;
-}
-
-// Para Enterprise, executar o reCAPTCHA quando o formulário for enviado
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('demo-form');
+    console.log('✅ reCAPTCHA validado! Token:', token);
+    // Ativar o botão de submit quando o reCAPTCHA for completado
     const submitBtn = document.getElementById('submitBtn');
-    
-    // Desabilitar botão até reCAPTCHA ser completado
     if (submitBtn) {
-        submitBtn.disabled = true;
+        submitBtn.disabled = false;
+        console.log('✅ Botão ativado!');
+    } else {
+        console.error('❌ Botão com ID submitBtn não encontrado');
     }
-    
-    // Quando o form for enviado, executar reCAPTCHA Enterprise
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Executar reCAPTCHA Enterprise
-            grecaptcha.enterprise.ready(function() {
-                grecaptcha.enterprise.execute('6LdiWIUsAAAAALYQRdeEQe1GedEfVr_AqWbDoBDQ', {action: 'submit'}).then(function(token) {
-                    document.getElementById('recaptchaToken').value = token;
-                    // Agora enviar o formulário
-                    form.submit();
-                });
-            });
-        });
-    }
-});
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     // Desabilitar botão até reCAPTCHA ser completado
