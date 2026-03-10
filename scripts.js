@@ -4,6 +4,9 @@
 
 // reCAPTCHA callback function
 function onRecaptchaSuccess(token) {
+    // Capturar o token do reCAPTCHA
+    document.getElementById('recaptchaToken').value = token;
+    // Ativar o botão de submit
     document.getElementById('submitBtn').disabled = false;
 }
 
