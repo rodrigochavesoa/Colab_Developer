@@ -208,6 +208,9 @@
                 <button class="tab-button" onclick="switchTab('terms')">
                     <i class="bi bi-file-text"></i> Termos de Serviço
                 </button>
+                <button class="tab-button" onclick="switchTab('integrations')">
+                    <i class="bi bi-link-45deg"></i> Integrações
+                </button>
                 <button class="tab-button" onclick="switchTab('license')">
                     <i class="bi bi-code-slash"></i> Licença
                 </button>
@@ -560,11 +563,147 @@
                         </ul>
                     </div>
                 </div>
+
+                <!-- INTEGRATIONS POLICY -->
+                <div id="integrations" class="legal-section">
+                    <div class="legal-article">
+                        <h3>🔗 Integrações com Terceiros</h3>
+                        <p><strong>Última atualização:</strong> 10 de Março de 2026</p>
+                        <p>STAFF permite conexão com plataformas externas para enriquecer a experiência do usuário. Esta seção documenta como dados são tratados em integrações.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>Intervals.icu - Rastreamento de Atividades</h3>
+                        <p><strong>O que é:</strong> Plataforma especializada em análise e planejamento de treinos para atletas</p>
+                        <p><strong>Website:</strong> <a href="https://intervals.icu" target="_blank" rel="noopener noreferrer">https://intervals.icu</a></p>
+                        <p><strong>Suporte:</strong> support@intervals.icu</p>
+                        <p><strong>Localização de dados:</strong> Servidores na Alemanha e Finlândia; backups em Google Cloud, Backblaze e Wasabi</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>📊 Dados de Origem</h3>
+                        <p>Seus dados no Intervals.icu podem vir de:</p>
+                        <ul>
+                            <li>• <strong>Upload direto:</strong> Arquivos FIT, TCX, GPX que você faz upload</li>
+                            <li>• <strong>Integrações autorizadas:</strong> Google, Oura, Strava, Garmin, Suunto, Polar, Wahoo, Dropbox (com sua autorização)</li>
+                        </ul>
+                        <p><em>Você é sempre responsável por autorizar quais plataformas acessam seus dados.</em></p>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>🔐 O que é compartilhado com Intervals.icu?</h3>
+                        <p><strong>STAFF acessa (com autorização):</strong></p>
+                        <ul>
+                            <li>✓ Histórico completo de atividades (corrida, ciclismo, triatlo)</li>
+                            <li>✓ Dados de wellness (peso, frequência cardíaca, stress, sono)</li>
+                            <li>✓ Planejamento de treino (workouts agendados)</li>
+                            <li>✓ Métricas de performance (potência, velocidade, elevação)</li>
+                        </ul>
+                        <p><strong>STAFF NÃO compartilha com Intervals.icu:</strong></p>
+                        <ul>
+                            <li>❌ Fichas de treino STAFF</li>
+                            <li>❌ Dados de reabilitação</li>
+                            <li>❌ Histórico médico ou diagnósticos</li>
+                            <li>❌ Feedback pessoal</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>👤 Visibilidade de Seu Perfil Intervals.icu</h3>
+                        <p><strong>Por padrão (público):</strong></p>
+                        <ul>
+                            <li>🔓 Seu nome aparece na busca de atletas</li>
+                            <li>🔓 Localização é visível</li>
+                            <li>🔓 Foto de perfil é visível</li>
+                        </ul>
+                        <p><strong>Dados privados (apenas autorizados):</strong></p>
+                        <ul>
+                            <li>🔒 Atividades (apenas pessoas que você autoriza)</li>
+                            <li>🔒 Wellness data (apenas pessoas que você autoriza)</li>
+                        </ul>
+                        <p><strong>Como ocultar seu perfil:</strong> Acesse /settings no Intervals.icu e defina perfil como "Oculto"</p>
+                    </div>
+
+                    <div class="highlight-box">
+                        <strong>🔄 Como Funciona:</strong><br>
+                        1. Você clica "Conectar Intervals.icu" no STAFF<br>
+                        2. Redirecionado para Intervals.icu para autorizar<br>
+                        3. Aprova permissões de leitura<br>
+                        4. STAFF sincroniza dados periodicamente<br>
+                        5. Pode desconectar a qualquer momento
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>📊 Dados Armazenados</h3>
+                        <p><strong>No Intervals.icu (Autoridade):</strong> Dados originais mantidos indefinidamente</p>
+                        <p><strong>No STAFF (Cópia Local):</strong></p>
+                        <ul>
+                            <li>• <strong>Atividades:</strong> Mantidas até solicitação de exclusão</li>
+                            <li>• <strong>Wellness:</strong> Mantidas para análise histórica</li>
+                            <li>• <strong>Tokens:</strong> Criptografados com AES-256</li>
+                            <li>• <strong>Logs:</strong> Mantidos por 90 dias para auditoria</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>🔓 Como Desconectar</h3>
+                        <p><strong>Passo 1 - No STAFF:</strong> Configurações → Integrações → Intervals.icu → Desconectar</p>
+                        <p><strong>Passo 2 - No Intervals.icu (Recomendado):</strong> https://intervals.icu/settings/integrations → Revogar acesso a "STAFF Personal Trainer"</p>
+                        <p><strong>Passo 3 - Exclusão de Dados (Opcional):</strong> Contate atendimento@rcstorestaff.com.br para deletar dados da cópia local</p>
+                        <p><strong>Após desconexão:</strong> Sem novas sincronizações, dados históricos mantidos por 180 dias</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>🗑️ Excluir Dados no Intervals.icu</h3>
+                        <p><strong>Para deletar dados de atividades e wellness:</strong></p>
+                        <ol>
+                            <li>Acesse sua conta no Intervals.icu</li>
+                            <li>Navegue até /settings</li>
+                            <li>Clique em "Excluir conta" ou opção de exclusão de dados</li>
+                            <li>Confirme a exclusão</li>
+                        </ol>
+                        <p><em>Nota: Exclusão no Intervals.icu não deleta automaticamente dados já sincronizados no STAFF.</em></p>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>🛡️ Segurança</h3>
+                        <ul>
+                            <li>✅ OAuth 2.0 (padrão de segurança da indústria)</li>
+                            <li>✅ Tokens criptografados em banco de dados (AES-256)</li>
+                            <li>✅ HTTPS/TLS 1.3 em todas requisições</li>
+                            <li>✅ Validação de integridade via webhooks assinados</li>
+                        </ul>
+                        <p><strong>⚠️ Aviso:</strong> Nenhum método de transmissão pela Internet é 100% seguro. Não garantimos segurança absoluta.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>📋 Conformidade Legal</h3>
+                        <ul>
+                            <li>✅ LGPD (Lei Geral de Proteção de Dados)</li>
+                            <li>✅ GDPR (para usuários na EU)</li>
+                            <li>✅ Terms of Service do Intervals.icu</li>
+                            <li>✅ OWASP Top 10 Security Standards</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>⚠️ Termos Intervals.icu</h3>
+                        <p>Para política completa de privacidade do Intervals.icu: <a href="https://intervals.icu/terms" target="_blank" rel="noopener noreferrer">https://intervals.icu/terms</a></p>
+                        <p>STAFF respeita totalmente os termos de serviço do Intervals.icu.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <h3>💬 Dúvidas ou Problemas?</h3>
+                        <p><strong>Suporte STAFF:</strong> atendimento@rcstorestaff.com.br</p>
+                        <p><strong>Suporte Intervals.icu:</strong> support@intervals.icu</p>
+                        <p><strong>Representante de Privacidade (EU/UK):</strong> Prighter Group - https://app.prighter.com/portal/intervals-icu</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER --> 
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
