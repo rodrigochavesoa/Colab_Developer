@@ -3,11 +3,17 @@
 // ========================================
 
 // reCAPTCHA callback function
-function onSubmit(token) {
-    document.getElementById("demo-form").submit();
+function onRecaptchaSuccess(token) {
+    document.getElementById('submitBtn').disabled = false;
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Desabilitar botão até reCAPTCHA ser completado
+    const submitBtn = document.getElementById('submitBtn');
+    if (submitBtn) {
+        submitBtn.disabled = true;
+    }
+
     // Update active nav link
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav a');
