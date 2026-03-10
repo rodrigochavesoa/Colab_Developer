@@ -2,6 +2,11 @@
 // SMOOTH SCROLL & ACTIVE NAV
 // ========================================
 
+// reCAPTCHA callback function
+function onSubmit(token) {
+    document.getElementById("demo-form").submit();
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // Update active nav link
     const sections = document.querySelectorAll('section[id]');
@@ -28,22 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Form submission - Formspree will handle the submission
-    const form = document.querySelector('.contact-form form');
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            // Validar reCAPTCHA antes de enviar
-            const recaptchaResponse = grecaptcha.getResponse();
-            
-            if (!recaptchaResponse) {
-                e.preventDefault();
-                alert('Por favor, complete o desafio reCAPTCHA antes de enviar o formulário.');
-                return false;
-            }
-            
-            // Allow normal form submission to Formspree
-            console.log('Formulário validado e enviado para Formspree');
-        });
-    }
+    // Removed event listener, using reCAPTCHA callback instead
 });
 
 // ========================================
