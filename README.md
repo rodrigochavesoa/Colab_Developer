@@ -1,4 +1,4 @@
-# 🌐 Website Público - Colab Developer
+# 🌐 Website Público - Colab Developer v2 (YOLO)
 
 Este diretório contém o **website público** da plataforma Colab Developer, hospedado em GitHub Pages.
 
