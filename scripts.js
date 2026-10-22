@@ -299,6 +299,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Command items configuration
     const commands = [
+        { label: 'STAFF Core', section: 'portfolio', icon: '∞', shortcut: 'Ctrl+K' },
         { label: 'Features', section: 'features', icon: '🏠', shortcut: '⇧+F' },
         { label: 'Arquitetura', section: 'architecture', icon: '🏗️', shortcut: '⇧+A' },
         { label: 'Roadmap', section: 'roadmap', icon: '📋', shortcut: '⇧+R' },

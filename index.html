@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Beta Staff - Plataforma inteligente de geração de fichas de treino com IA">
-    <meta name="keywords" content="fichas treino, musculação, corrida, reabilitação, IA, Daniels">
+    <meta name="description" content="Colab Developer: laboratório colaborativo e portfólio do STAFF Core, API em Go para apoiar o Agente Prescritor com curadoria do Personal.">
+    <meta name="keywords" content="Colab Developer, STAFF Core, Go, API, design system, colaboração">
     <title>Colab Developer</title>
+    <link rel="canonical" href="https://rodrigochavesoa.github.io/Colab_Developer/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Colab Developer — STAFF Core">
+    <meta property="og:description" content="Um laboratório colaborativo para tecnologia aplicada à Educação Física. Conheça a fase atual do STAFF Core.">
+    <meta property="og:url" content="https://rodrigochavesoa.github.io/Colab_Developer/">
+    <meta property="og:image" content="https://rodrigochavesoa.github.io/Colab_Developer/Colab_Developer.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
     <!-- Favicon - Responsive sizes -->
     <link rel="icon" type="image/png" sizes="32x32" href="images-favicon/mascote_colab_developer.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images-favicon/mascote_colab_developer.png">
     <link rel="apple-touch-icon" href="images-favicon/mascote_colab_developer.png">
-    <meta name="theme-color" content="#004688">
+    <meta name="theme-color" content="#e7e5e4">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles.css">
     <!-- Google reCAPTCHA v2 -->
@@ -23,6 +32,7 @@
             <a href="index.html" class="logo" style="text-decoration: none; color: inherit;"> Colab Developer <img src="images-favicon/Group_29_1.png"alt="Colab" style="margin-left: 5px; margin-top: 2px; height: 32px; vertical-align: middle;"></a>
             <nav class="nav">
                 <a href="#features">Features</a>
+                <a href="#portfolio">STAFF Core</a>
                 <a href="#architecture">Arquitetura</a>
                 <a href="#roadmap">Roadmap</a>
                 <a href="#contact">Contato</a>
@@ -84,6 +94,52 @@
                     <span class="stat-label">IA como expansão</span>
                 </div>
             </div>
+            <p class="hero-legacy-note">Apresentação original preservada. Para o escopo e a stack atuais do STAFF, consulte <a href="#portfolio">STAFF Core</a>.</p>
+        </div>
+    </section>
+
+    <!-- STAFF CORE PORTFOLIO: current project phase, documented in the STAFF Core README. -->
+    <section id="portfolio" class="portfolio-section" aria-labelledby="portfolio-title">
+        <div class="container">
+            <div class="portfolio-heading">
+                <span class="portfolio-eyebrow">Projeto em desenvolvimento · Go</span>
+                <h2 id="portfolio-title">STAFF Core</h2>
+                <p>Uma API em Go que prepara a base do Agente Prescritor do STAFF. O Personal mantém a responsabilidade técnica e atua como Curador das Fichas.</p>
+            </div>
+            <div class="portfolio-grid">
+                <article class="portfolio-card portfolio-card-featured">
+                    <span class="portfolio-status status-current">Fase atual</span>
+                    <h3>Biblioteca de Exercícios</h3>
+                    <p>O core já oferece importação da Biblioteca por CSV e curadoria inicial das Demandas dos Exercícios, com persistência SQLite.</p>
+                    <ul>
+                        <li>Importação e consulta do catálogo</li>
+                        <li>Curadoria de Demandas controladas</li>
+                        <li>API HTTP documentada em OpenAPI</li>
+                    </ul>
+                </article>
+                <article class="portfolio-card">
+                    <span class="portfolio-status status-foundation">Base técnica</span>
+                    <h3>Responsabilidades bem separadas</h3>
+                    <p>O projeto organiza a API, a aplicação, o domínio e a persistência em componentes distintos, para manter as regras independentes do adaptador de banco.</p>
+                    <ul>
+                        <li>Go 1.26+ e roteamento com chi</li>
+                        <li>SQLite via modernc.org/sqlite, sem CGO</li>
+                        <li>Contrato OpenAPI 3</li>
+                    </ul>
+                </article>
+                <article class="portfolio-card">
+                    <span class="portfolio-status status-next">Próximos passos</span>
+                    <h3>Evolução do produto</h3>
+                    <p>A visão do STAFF inclui Anamnese estruturada, avaliação determinística de regras clínicas e Propostas para revisão do Curador. Essas capacidades evoluem por etapas e não devem ser confundidas com o escopo já implementado.</p>
+                    <ul>
+                        <li>O Agente Prescritor propõe</li>
+                        <li>O Personal revisa e aprova</li>
+                        <li>Entrega e integrações são etapas futuras</li>
+                    </ul>
+                </article>
+            </div>
+            <p class="portfolio-footnote">O site continua sendo HTML, CSS e JavaScript estáticos. Esta seção descreve a fase atual do core; não representa uma API pública para uso externo.</p>
+            <a class="portfolio-link" href="https://github.com/rodrigochavesoa/Colab_Developer" target="_blank" rel="noopener noreferrer">Acompanhar o portfólio público no GitHub <span aria-hidden="true">↗</span></a>
         </div>
     </section>
 
@@ -94,6 +150,7 @@
         <div class="container">
             <h2>Projeto em DEV</h2>
             <h3><a href="https://www.instagram.com/staff.app" target="_blank" rel="noopener noreferrer">STAFF APP</a></h3>
+            <p class="legacy-note"><strong>Nota de atualização:</strong> os cards abaixo foram mantidos conforme a escrita original do site. Eles representam a apresentação anterior do projeto e não descrevem necessariamente a fase atual do STAFF Core, apresentada acima.</p>
             
             <!-- STAFF APP Showcase Image -->
             <div class="staff-app-showcase">
@@ -198,6 +255,7 @@
     <section id="architecture" class="architecture">
         <div class="container">
             <h2>Stack Tecnológico</h2>
+            <p class="legacy-note"><strong>Contexto:</strong> a lista e o diagrama abaixo são conteúdo legado preservado. Para a stack atual do core, consulte a seção <a href="#portfolio">STAFF Core</a>.</p>
             
             <div class="tech-grid">
                 <div class="tech-group">
@@ -376,6 +434,7 @@
     <section id="roadmap" class="roadmap">
         <div class="container">
             <h2>Roadmap Público</h2>
+            <p class="legacy-note"><strong>Contexto:</strong> o roadmap abaixo foi preservado como escrito e pode não refletir o planejamento atual do STAFF Core. A seção <a href="#portfolio">STAFF Core</a> identifica a fase atual documentada.</p>
             <p class="roadmap-intro">
                 Veja as fases completadas e o que vem pela frente. Colaboradores podem assumir tarefas em Fases 4-8.
             </p>
@@ -677,6 +736,10 @@
         <a href="legal.html#terms" class="more-item">
             <i class="bi bi-file-text"></i>
             <span>Termos</span>
+        </a>
+        <a href="#portfolio" class="more-item">
+            <i class="bi bi-braces"></i>
+            <span>STAFF Core</span>
         </a>
         <a href="https://github.com/rodrigochavesoa" target="_blank" class="more-item" rel="noopener noreferrer">
             <i class="bi bi-github"></i>
