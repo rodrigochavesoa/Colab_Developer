@@ -3,302 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Beta Staff - Plataforma inteligente de geração de fichas de treino com IA">
-    <meta name="keywords" content="fichas treino, musculação, corrida, reabilitação, IA, Daniels">
-    <title>Colab Developer</title>
-    <!-- Favicon - Responsive sizes -->
+    <meta name="description" content="Colab Developer é um laboratório colaborativo de tecnologia aplicada à Educação Física. Conheça o STAFF Core, sua API em Go e a fase atual do projeto.">
+    <meta name="keywords" content="Colab Developer, STAFF Core, Go, API, Educação Física, tecnologia, colaboração">
+    <meta name="theme-color" content="#e7e5e4">
+    <title>Colab Developer — Laboratório de produto</title>
+    <link rel="canonical" href="https://rodrigochavesoa.github.io/Colab_Developer/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Colab Developer — Laboratório de produto">
+    <meta property="og:description" content="Tecnologia aplicada à Educação Física, construída em colaboração. Conheça a fase atual do STAFF Core.">
+    <meta property="og:url" content="https://rodrigochavesoa.github.io/Colab_Developer/">
+    <meta property="og:image" content="https://rodrigochavesoa.github.io/Colab_Developer/Colab_Developer.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
     <link rel="icon" type="image/png" sizes="32x32" href="images-favicon/mascote_colab_developer.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images-favicon/mascote_colab_developer.png">
     <link rel="apple-touch-icon" href="images-favicon/mascote_colab_developer.png">
-    <meta name="theme-color" content="#004688">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles.css">
-    <!-- Google reCAPTCHA v2 -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
-    <!-- HEADER -->
     <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;"> Colab Developer <img src="images-favicon/Group_29_1.png"alt="Colab" style="margin-left: 5px; margin-top: 2px; height: 32px; vertical-align: middle;"></a>
-            <nav class="nav">
-                <a href="#features">Features</a>
-                <a href="#architecture">Arquitetura</a>
+        <div class="header-inner">
+            <a href="#overview" class="logo" aria-label="Colab Developer, início">
+                <span class="logo-mark" aria-hidden="true">∞</span>
+                <span>Colab <b>Developer</b></span>
+                <img src="images-favicon/Group_29_1.png" alt="" class="logo-mascot">
+            </a>
+            <nav class="nav" aria-label="Navegação principal">
+                <a href="#features">Projetos</a>
+                <a href="#architecture">Tecnologias</a>
                 <a href="#roadmap">Roadmap</a>
                 <a href="#contact">Contato</a>
-                <button class="theme-toggle-header" id="themeToggleHeader" aria-label="Alternar tema" title="Alternar entre Light/Dark">
-                    <i class="bi bi-moon"></i>
+                <button class="theme-toggle-header" id="themeToggleHeader" aria-label="Ativar tema escuro" title="Alternar tema">
+                    <i class="bi bi-moon" aria-hidden="true"></i>
                 </button>
             </nav>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-   <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <span class="badge-tech">#FitnessTech #OpenColab </span>
-                <h1>Colab Developer <img src="images-favicon/mascote_colab_developer.png" alt="Colab" style="margin-left: 5px; height: 48px; vertical-align: middle;"></h1>
-                <p class="subtitle">
-                    Um laboratório colaborativo criado por quem vive a Educação Física há 16 anos e respira desenvolvimento de software.
-                </p>
-                <p class="description">
-                    Olá Dev, aqui é Rodrigo Chaves,
-                    sou profissional de Educação Física, Engenharia de produção 50%,  Self-taught Developer, estudante e apaixonado por IA e Tecnologia. O <strong>Colab Developer</strong> é um ambiente para quem quer aplicar conhecimentos novos em problemas reais do mundo e-fitness e tecnologia.<strong> Toolkit atual: HTML, Design System, JavaScript, Python, Pythonanywhere, Flask, Docker, React Native, Node.js, Next.Js, Supabase, PostgreSQL, SQLite, Figma, Adobe, UX/UI, RAG, Generative AI e GitHub.</strong> 
-                    <br><br>
-                    Quer agregar com seus conhecimentos? Vamos se conectar e ajudar outras pessoas! O repositório está esperando por você.
-                </p>
-                <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-success">
-                        <i class="bi bi-code-slash"></i> Quero Colaborar
-                    </a>
-                    <a href="#roadmap" class="btn btn-secondary">
-                        <i class="bi bi-journal-code"></i> Ver Stack & Roadmap
-                    </a>
+    <main class="dashboard">
+        <section id="overview" class="overview section-anchor" aria-labelledby="overview-title">
+            <div class="overview-grid">
+                <article class="intro-card card-ink">
+                    <div class="eyebrow"><span class="eyebrow-dot"></span> #FitnessTech <span class="eyebrow-divider">/</span> #OpenColab</div>
+                    <h1 id="overview-title">Tecnologia que nasce de problemas reais.</h1>
+                    <p class="intro-lead">O Colab Developer é um laboratório colaborativo para aproximar Educação Física e desenvolvimento de software.</p>
+                    <p class="intro-copy">Criado por quem vive a Educação Física há 16 anos e respira tecnologia. Aqui, novas ideias viram projetos aplicados ao mundo e-fitness — com aprendizado aberto, trabalho em equipe e responsabilidade profissional.</p>
+                    <div class="intro-actions">
+                        <a class="button button-light" href="#features"><i class="bi bi-grid-1x2" aria-hidden="true"></i> Explorar projetos</a>
+                        <a class="button button-ghost" href="#contact"><i class="bi bi-arrow-up-right" aria-hidden="true"></i> Quero colaborar</a>
+                    </div>
+                    <div class="intro-signature"><span>RODRIGO CHAVES</span><span>Profissional de Educação Física · Desenvolvedor autodidata</span></div>
+                </article>
+
+                <aside class="identity-card" aria-label="Identidade do Colab Developer">
+                    <div class="identity-topline"><span>LABORATÓRIO ABERTO</span><i class="bi bi-stars" aria-hidden="true"></i></div>
+                    <div class="identity-art"><span class="identity-orbit identity-orbit-one"></span><span class="identity-orbit identity-orbit-two"></span><img src="images-favicon/mascote_colab_developer_black.png" alt="Mascote do Colab Developer"></div>
+                    <div class="identity-caption"><span class="identity-symbol">∞</span><div><strong>Aprender fazendo.</strong><small>Construir em colaboração.</small></div></div>
+                    <span class="identity-index">01 — 04</span>
+                </aside>
+
+                <div class="snapshot-strip" aria-label="Resumo da fase atual do STAFF Core">
+                    <div class="snapshot-label"><span>NO FOCO AGORA</span><strong>STAFF Core</strong></div>
+                    <div class="snapshot-item"><span class="snapshot-icon icon-blue"><i class="bi bi-code-slash" aria-hidden="true"></i></span><div><small>Core</small><strong>Go + chi</strong></div></div>
+                    <div class="snapshot-item"><span class="snapshot-icon icon-violet"><i class="bi bi-database" aria-hidden="true"></i></span><div><small>Persistência</small><strong>SQLite</strong></div></div>
+                    <div class="snapshot-item"><span class="snapshot-icon icon-green"><i class="bi bi-check2-circle" aria-hidden="true"></i></span><div><small>Fase</small><strong>Biblioteca e curadoria</strong></div></div>
+                    <a class="snapshot-arrow" href="#features" aria-label="Ver detalhes do STAFF Core"><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
                 </div>
             </div>
-            
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-num">16+ Anos</span>
-                    <span class="stat-label">Know-how em Treino</span>
+        </section>
+
+        <section id="features" class="projects-section section-anchor" aria-labelledby="projects-title">
+            <div class="section-heading">
+                <div><span class="section-kicker">01 / PROJETOS</span><h2 id="projects-title">Ideias em construção.</h2></div>
+                <p>Um espaço para transformar experiência prática em ferramentas úteis — com o STAFF como projeto principal desta fase.</p>
+            </div>
+            <div class="project-grid">
+                <article class="project-card staff-card">
+                    <div class="project-card-head"><span class="status-pill status-live"><i class="status-dot"></i> Em desenvolvimento</span><span class="card-index">01</span></div>
+                    <div class="staff-card-body">
+                        <div class="staff-card-copy">
+                            <span class="project-type">PROJETO PRINCIPAL</span>
+                            <h3>STAFF Core</h3>
+                            <p>O core em Go prepara a base do Agente Prescritor. A API já cobre a saúde do serviço, a importação da Biblioteca de Exercícios e sua curadoria inicial.</p>
+                            <div class="tech-pills"><span>Go 1.26+</span><span>chi</span><span>SQLite</span><span>OpenAPI</span></div>
+                            <a class="text-link" href="#roadmap">Ver fase e próximos passos <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="staff-card-visual" aria-label="Ilustração do STAFF Core">
+                            <span class="visual-glow"></span><span class="visual-orbit"></span>
+                            <div class="api-window"><div class="api-window-top"><i></i><i></i><i></i><span>STAFF / CORE</span></div><div class="api-line api-line-long"></div><div class="api-line api-line-short"></div><div class="api-response"><span class="status-dot"></span> biblioteca · curadoria</div><div class="api-line api-line-mid"></div><div class="api-line api-line-short"></div></div>
+                            <span class="visual-caption">FUNDAMENTO EM GO</span>
+                        </div>
+                    </div>
+                    <div class="project-card-foot"><span><i class="bi bi-person-check" aria-hidden="true"></i> O Personal permanece responsável pela revisão e aprovação.</span><span class="foot-accent"></span></div>
+                </article>
+
+                <article class="project-card compact-card">
+                    <div class="project-card-head"><span class="status-pill status-foundation">Método</span><span class="card-index">02</span></div>
+                    <span class="module-icon icon-orange"><i class="bi bi-people" aria-hidden="true"></i></span>
+                    <h3>Colaboração com propósito</h3>
+                    <p>Um convite para aplicar conhecimentos novos em problemas reais e compartilhar o que aprendemos no caminho.</p>
+                    <a class="text-link" href="#contact">Participar do Colab <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                    <span class="compact-decoration" aria-hidden="true">∞</span>
+                </article>
+
+                <article class="project-card compact-card design-card">
+                    <div class="project-card-head"><span class="status-pill status-design">Prática contínua</span><span class="card-index">03</span></div>
+                    <span class="module-icon icon-violet"><i class="bi bi-palette2" aria-hidden="true"></i></span>
+                    <h3>Design e tecnologia</h3>
+                    <p>Interfaces, sistemas visuais e experimentos fazem parte do processo de tornar produtos digitais mais claros e consistentes.</p>
+                    <a class="text-link" href="https://github.com/rodrigochavesoa" target="_blank" rel="noopener noreferrer">Conhecer o trabalho <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                    <span class="design-swatch" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+                </article>
+            </div>
+        </section>
+
+        <section id="architecture" class="technology-section section-anchor" aria-labelledby="technology-title">
+            <div class="section-heading">
+                <div><span class="section-kicker">02 / BASE TÉCNICA</span><h2 id="technology-title">Peças simples. Limites claros.</h2></div>
+                <p>O portfólio mostra o que está ativo hoje. A arquitetura separa responsabilidades para evoluir sem confundir protótipo, contrato e capacidade entregue.</p>
+            </div>
+            <div class="technology-layout">
+                <article class="technology-card card-white">
+                    <div class="technology-card-heading"><span class="module-icon icon-blue"><i class="bi bi-stack" aria-hidden="true"></i></span><div><span class="project-type">STAFF CORE · API</span><h3>Stack atual</h3></div></div>
+                    <div class="stack-list">
+                        <div><span class="stack-symbol">Go</span><span><strong>Go 1.26+</strong><small>API HTTP com roteamento chi</small></span><span class="stack-status status-implemented">Em uso</span></div>
+                        <div><span class="stack-symbol"><i class="bi bi-database" aria-hidden="true"></i></span><span><strong>SQLite</strong><small>Adaptador modernc.org/sqlite</small></span><span class="stack-status status-implemented">Em uso</span></div>
+                        <div><span class="stack-symbol"><i class="bi bi-braces" aria-hidden="true"></i></span><span><strong>OpenAPI 3</strong><small>Contrato da API</small></span><span class="stack-status status-implemented">Documentado</span></div>
+                    </div>
+                </article>
+                <article class="technology-card architecture-card">
+                    <div class="architecture-top"><span class="module-icon icon-green"><i class="bi bi-diagram-3" aria-hidden="true"></i></span><span class="status-pill status-foundation">Organização</span></div>
+                    <h3>Responsabilidades separadas</h3>
+                    <p>API, aplicação, domínio e adaptador de persistência têm papéis distintos. As regras da aplicação dependem de interfaces, não de SQL ou do banco.</p>
+                    <div class="layer-flow"><span>HTTP</span><i class="bi bi-arrow-right"></i><span>Aplicação</span><i class="bi bi-arrow-right"></i><span>Domínio</span></div>
+                </article>
+                <article class="technology-card site-card">
+                    <div class="architecture-top"><span class="module-icon icon-orange"><i class="bi bi-window" aria-hidden="true"></i></span><span class="status-pill status-foundation">Este portfólio</span></div>
+                    <h3>Leve e publicado na web</h3>
+                    <p>O site segue em HTML, CSS e JavaScript estáticos, hospedado no GitHub Pages.</p>
+                    <div class="tech-pills"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                </article>
+            </div>
+        </section>
+
+        <section id="roadmap" class="roadmap-section section-anchor" aria-labelledby="roadmap-title">
+            <div class="section-heading">
+                <div><span class="section-kicker">03 / EVOLUÇÃO</span><h2 id="roadmap-title">O que existe. O que vem depois.</h2></div>
+                <p>O STAFF está evoluindo por etapas. A proposta do Agente Prescritor é apoiar o trabalho do Personal, que segue como Curador e autoridade técnica.</p>
+            </div>
+            <div class="roadmap-grid">
+                <article class="roadmap-card roadmap-current">
+                    <div class="roadmap-card-head"><span class="status-pill status-live"><i class="status-dot"></i> Implementado</span><span class="card-index">AGORA</span></div>
+                    <h3>Base da Biblioteca</h3>
+                    <p>Primeira entrega funcional do novo core.</p>
+                    <ul class="milestone-list">
+                        <li><span class="milestone-check"><i class="bi bi-check2"></i></span><span>Verificação de saúde da API</span></li>
+                        <li><span class="milestone-check"><i class="bi bi-check2"></i></span><span>Importação CSV da Biblioteca de Exercícios</span></li>
+                        <li><span class="milestone-check"><i class="bi bi-check2"></i></span><span>Consulta e curadoria inicial de Demandas</span></li>
+                        <li><span class="milestone-check"><i class="bi bi-check2"></i></span><span>Persistência SQLite por interfaces</span></li>
+                    </ul>
+                </article>
+                <article class="roadmap-card roadmap-next">
+                    <div class="roadmap-card-head"><span class="status-pill status-planned"><i class="status-dot"></i> Planejado</span><span class="card-index">A SEGUIR</span></div>
+                    <h3>Prescrição com curadoria</h3>
+                    <p>Etapas descritas na visão do produto, ainda em evolução.</p>
+                    <ul class="milestone-list planned-list">
+                        <li><span class="milestone-marker marker-violet"></span><span>Regras determinísticas para avaliação clínica</span></li>
+                        <li><span class="milestone-marker marker-orange"></span><span>Propostas do Agente para revisão do Curador</span></li>
+                        <li><span class="milestone-marker marker-gray"></span><span>Entrega e integrações nas etapas futuras</span></li>
+                    </ul>
+                    <div class="roadmap-note"><i class="bi bi-info-circle" aria-hidden="true"></i> Planejado não significa disponível na API hoje.</div>
+                </article>
+                <aside class="curator-card card-ink">
+                    <span class="curator-icon"><i class="bi bi-person-check" aria-hidden="true"></i></span>
+                    <span class="project-type">PAPEL HUMANO</span>
+                    <h3>O Personal continua no centro.</h3>
+                    <p>O Agente Prescritor propõe. O Personal revisa, ajusta e aprova as Fichas.</p>
+                    <a href="#contact" class="curator-link">Vamos conversar <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                    <img src="mascote_colab_developer.png" alt="" aria-hidden="true">
+                </aside>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section section-anchor" aria-labelledby="contact-title">
+            <div class="contact-layout">
+                <div class="contact-copy">
+                    <span class="section-kicker">04 / CONVERSA</span>
+                    <h2 id="contact-title">Conhecimento cresce quando é compartilhado.</h2>
+                    <p>Quer agregar com seus conhecimentos? Vamos nos conectar e ajudar outras pessoas.</p>
+                    <div class="contact-email"><span class="contact-icon"><i class="bi bi-envelope" aria-hidden="true"></i></span><div><small>Contato geral</small><a href="mailto:atendimento@rcstorestaff.com.br">atendimento@rcstorestaff.com.br</a></div></div>
+                    <a class="social-link" href="https://github.com/rodrigochavesoa" target="_blank" rel="noopener noreferrer"><i class="bi bi-github" aria-hidden="true"></i> GitHub <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                    <a class="social-link" href="https://linkedin.com/in/rodrigochavesoa" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin" aria-hidden="true"></i> LinkedIn <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
                 </div>
-                <div class="stat">
-                    <span class="stat-num">7,2k+</span>
-                    <span class="stat-label">Lines of Code</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-num">RAG</span>
-                    <span class="stat-label">Arquitetura de Dados</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-num">Claude Code + Github Copilot</span>
-                    <span class="stat-label">Core Engine</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-num">Web App SaaS Mobile</span>
-                    <span class="stat-label">Full Stack Developer</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-num">LifeLong Learning</span>
-                    <span class="stat-label">IA como expansão</span>
+                <div class="contact-form-card">
+                    <div class="form-heading"><span class="module-icon icon-blue"><i class="bi bi-chat-square-text" aria-hidden="true"></i></span><div><h3>Enviar uma mensagem</h3><p>Conte como gostaria de colaborar.</p></div></div>
+                    <form id="demo-form" action="https://formspree.io/f/xqedjwep" method="POST">
+                        <div class="form-row">
+                            <div class="form-group"><label for="name">Nome</label><input type="text" id="name" name="name" autocomplete="name" required></div>
+                            <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" required></div>
+                        </div>
+                        <div class="form-group"><label for="interest">Tenho interesse em</label><select id="interest" name="interest"><option value="">Selecione uma opção</option><option value="use">Conhecer a plataforma</option><option value="collaborate">Colaborar no projeto</option><option value="research">Pesquisa acadêmica</option><option value="other">Outro assunto</option></select></div>
+                        <div class="form-group"><label for="message">Mensagem</label><textarea id="message" name="message" rows="4" required></textarea></div>
+                        <div class="captcha-wrap"><div class="g-recaptcha" data-sitekey="6LfxbYUsAAAAAB4scfTJ9kRqIRITO_PxOwAgs7VU" data-callback="onRecaptchaSuccess"></div></div>
+                        <button type="submit" class="button button-primary" id="submitBtn" disabled><i class="bi bi-send" aria-hidden="true"></i> Enviar mensagem</button>
+                    </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    
+        <section class="history-section" aria-label="Arquivo da apresentação anterior">
+            <details class="history-archive">
+                <summary>Arquivo da apresentação anterior</summary>
+                <div class="history-content">
+                    <p class="history-warning">Este arquivo preserva o texto publicado anteriormente, inclusive métricas, tecnologias, capacidades e fases de roadmap que não descrevem a fase atual do STAFF Core. Consulte as seções atuais acima para a stack Go e o status confirmado. O arquivo não contém links para repositórios privados.</p>
 
-    <!-- FEATURES -->
-    <section id="features" class="features">
-        <div class="container">
-            <h2>Projeto em DEV</h2>
-            <h3><a href="https://www.instagram.com/staff.app" target="_blank" rel="noopener noreferrer">STAFF APP</a></h3>
-            
-            <!-- STAFF APP Showcase Image -->
-            <div class="staff-app-showcase">
-                <img src="STAFF_APP.png" alt="STAFF APP - Plataforma inteligente de geração de fichas de treino" class="staff-app-image" loading="lazy">
-            </div>
-            
-            <div class="features-grid">
-                <!-- Feature 1 -->
-                <div class="feature-card">
-                    <div class="feature-icon">🏋️</div>
-                    <h3>Musculação Inteligente</h3>
-                    <p>
-                        Gera fichas personalizadas baseadas em objetivos, nível e disponibilidade. 
-                        Inclui variedades de exercícios, progressão de volume e periodização.
-                    </p>
-                    <ul class="feature-list">
-                        <li>✓ Automação de fichas</li>
-                        <li>✓ Progressão inteligente</li>
-                        <li>✓ Múltiplos objetivos</li>
-                    </ul>
-                </div>
+                    <section class="history-block">
+                        <h3>Apresentação</h3>
+                        <p>Olá Dev, aqui é Rodrigo Chaves, sou profissional de Educação Física, Engenharia de produção 50%, Self-taught Developer, estudante e apaixonado por IA e Tecnologia. O <strong>Colab Developer</strong> é um ambiente para quem quer aplicar conhecimentos novos em problemas reais do mundo e-fitness e tecnologia.</p>
+                        <p><strong>Toolkit atual: HTML, Design System, JavaScript, Python, Pythonanywhere, Flask, Docker, React Native, Node.js, Next.Js, Supabase, PostgreSQL, SQLite, Figma, Adobe, UX/UI, RAG, Generative AI e GitHub.</strong></p>
+                        <p>Quer agregar com seus conhecimentos? Vamos se conectar e ajudar outras pessoas! O repositório está esperando por você.</p>
+                        <p><strong>Projeto em DEV — STAFF APP</strong></p>
+                        <ul><li>16+ Anos — Know-how em Treino</li><li>7,2k+ — Lines of Code</li><li>RAG — Arquitetura de Dados</li><li>Claude Code + Github Copilot — Core Engine</li><li>Web App SaaS Mobile — Full Stack Developer</li><li>LifeLong Learning — IA como expansão</li></ul>
+                        <p><strong>Chamadas da versão anterior:</strong> “Quero Colaborar” · “Ver Stack &amp; Roadmap”</p>
+                    </section>
 
-                <!-- Feature 2 -->
-                <div class="feature-card">
-                    <div class="feature-icon">🏃</div>
-                    <h3>Corrida Periodizada</h3>
-                    <p>
-                        Baseado na Fórmula de Daniels. Cria planos de treino para qualquer objetivo: 
-                        5K, meia maratona, maratona com periodização profissional.
-                    </p>
-                    <ul class="feature-list">
-                        <li>✓ Fórmula de Daniels</li>
-                        <li>✓ Múltiplas distâncias</li>
-                        <li>✓ Pausas e recuperação</li>
-                    </ul>
-                </div>
+                    <section class="history-block">
+                        <h3>Módulos apresentados</h3>
+                        <div class="history-grid">
+                            <article><h4>Musculação Inteligente</h4><p>Gera fichas personalizadas baseadas em objetivos, nível e disponibilidade. Inclui variedades de exercícios, progressão de volume e periodização.</p><ul><li>Automação de fichas</li><li>Progressão inteligente</li><li>Múltiplos objetivos</li></ul></article>
+                            <article><h4>Corrida Periodizada</h4><p>Baseado na Fórmula de Daniels. Cria planos de treino para qualquer objetivo: 5K, meia maratona, maratona com periodização profissional.</p><ul><li>Fórmula de Daniels</li><li>Múltiplas distâncias</li><li>Pausas e recuperação</li></ul></article>
+                            <article><h4>Reabilitação Personalizada</h4><p>Sistema de exercícios terapêuticos focado em recuperação. Adapta dificuldade e progressão baseado em feedback.</p><ul><li>Exercícios terapêuticos</li><li>Feedback de dor</li><li>Sistema de progresso</li></ul></article>
+                            <article><h4>IA Generativa</h4><p>Integração com Google Gemini 2.5 Flash. Adapta fichas em tempo real baseado em histórico e performance.</p><ul><li>Personalizacao dinâmica</li><li>Análise de padrões</li><li>Sugestões inteligentes</li></ul></article>
+                            <article><h4>Visualizações &amp; Exportação</h4><p>Gera gráficos de progressão, tabelas de volume e exportação em PDF. Dashboard interativo com histórico completo.</p><ul><li>Gráficos Matplotlib</li><li>Export PDF</li><li>Dashboard real-time</li></ul></article>
+                            <article><h4>Segurança &amp; Privacy</h4><p>Autenticação com bcrypt, acesso público por hash para fichas anônimas. Rate limiting e proteção contra ataque.</p><ul><li>Bcrypt hashing</li><li>Rate limiting</li><li>Acesso privado/público</li></ul></article>
+                        </div>
+                    </section>
 
-                <!-- Feature 3 -->
-                <div class="feature-card">
-                    <div class="feature-icon">🏥</div>
-                    <h3>Reabilitação Personalizada</h3>
-                    <p>
-                        Sistema de exercícios terapêuticos focado em recuperação. 
-                        Adapta dificuldade e progressão baseado em feedback.
-                    </p>
-                    <ul class="feature-list">
-                        <li>✓ Exercícios terapêuticos</li>
-                        <li>✓ Feedback de dor</li>
-                        <li>✓ Sistema de progresso</li>
-                    </ul>
-                </div>
+                    <section class="history-block">
+                        <h3>Stack tecnológico descrito anteriormente</h3>
+                        <div class="history-grid history-stack">
+                            <article><h4>Backend</h4><ul><li>Flask 3.0.0</li><li>Python 3.8+</li><li>SQLite</li><li>bcrypt + Flask-Login</li></ul></article>
+                            <article><h4>IA &amp; ML</h4><ul><li>Google Gemini 2.5</li><li>LangChain (RAG)</li><li>FAISS (Busca)</li><li>ChromaDB (Vetores)</li></ul></article>
+                            <article><h4>Frontend</h4><ul><li>HTML5/CSS3</li><li>JavaScript Vanilla</li><li>Jinja2 Templates</li><li>Dark Mode</li></ul></article>
+                            <article><h4>Dados &amp; Visualização</h4><ul><li>Matplotlib</li><li>ReportLab (PDF)</li><li>JSON</li><li>SQLite3</li></ul></article>
+                            <article><h4>Deployment</h4><ul><li>Docker &amp; Compose</li><li>GitHub Actions</li><li>Nginx</li><li>Gunicorn</li></ul></article>
+                            <article><h4>Desenvolvimento</h4><ul><li>Git &amp; GitHub</li><li>Pytest</li><li>Logging estruturado</li><li>Type hints</li></ul></article>
+                            <article><h4>Roadmap - Supabase Stack (Fase 8)</h4><ul><li><strong>PostgreSQL</strong> (12+)</li><li>Row-Level Security (RLS)</li><li>Supabase Auth (OAuth2)</li><li>Supabase Vector (pgvector)</li><li>Supabase Edge Functions</li><li>Supabase Realtime (WebSocket)</li></ul></article>
+                            <article><h4>Roadmap - Frontend Moderno (Fase 8)</h4><ul><li>Next.js 14 (App Router)</li><li>TypeScript 5+</li><li>TailwindCSS + shadcn/ui</li><li>React Query + Zustand</li><li>Vercel Deployment</li></ul></article>
+                            <article><h4>Roadmap - Mobile (Fase 8)</h4><ul><li>React Native (Expo)</li><li>Native Navigation Stack</li><li>Realm Offline Storage</li><li>Push Notifications</li><li>Apple App Store &amp; Google Play</li></ul></article>
+                        </div>
+                    </section>
 
-                <!-- Feature 4 -->
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h3>IA Generativa</h3>
-                    <p>
-                        Integração com Google Gemini 2.5 Flash. 
-                        Adapta fichas em tempo real baseado em histórico e performance.
-                    </p>
-                    <ul class="feature-list">
-                        <li>✓ Personalizacao dinâmica</li>
-                        <li>✓ Análise de padrões</li>
-                        <li>✓ Sugestões inteligentes</li>
-                    </ul>
-                </div>
-
-                <!-- Feature 5 -->
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Visualizações & Exportação</h3>
-                    <p>
-                        Gera gráficos de progressão, tabelas de volume e exportação em PDF. 
-                        Dashboard interativo com histórico completo.
-                    </p>
-                    <ul class="feature-list">
-                        <li>✓ Gráficos Matplotlib</li>
-                        <li>✓ Export PDF</li>
-                        <li>✓ Dashboard real-time</li>
-                    </ul>
-                </div>
-
-                <!-- Feature 6 -->
-                <div class="feature-card">
-                    <div class="feature-icon">🔐</div>
-                    <h3>Segurança & Privacy</h3>
-                    <p>
-                        Autenticação com bcrypt, acesso público por hash para fichas anônimas. 
-                        Rate limiting e proteção contra ataque.
-                    </p>
-                    <ul class="feature-list">
-                        <li>✓ Bcrypt hashing</li>
-                        <li>✓ Rate limiting</li>
-                        <li>✓ Acesso privado/público</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ARCHITECTURE -->
-    <section id="architecture" class="architecture">
-        <div class="container">
-            <h2>Stack Tecnológico</h2>
-            
-            <div class="tech-grid">
-                <div class="tech-group">
-                    <h4>Backend</h4>
-                    <ul>
-                        <li>Flask 3.0.0</li>
-                        <li>Python 3.8+</li>
-                        <li>SQLite</li>
-                        <li>bcrypt + Flask-Login</li>
-                    </ul>
-                </div>
-
-                <div class="tech-group">
-                    <h4>IA & ML</h4>
-                    <ul>
-                        <li>Google Gemini 2.5</li>
-                        <li>LangChain (RAG)</li>
-                        <li>FAISS (Busca)</li>
-                        <li>ChromaDB (Vetores)</li>
-                    </ul>
-                </div>
-
-                <div class="tech-group">
-                    <h4>Frontend</h4>
-                    <ul>
-                        <li>HTML5/CSS3</li>
-                        <li>JavaScript Vanilla</li>
-                        <li>Jinja2 Templates</li>
-                        <li>Dark Mode</li>
-                    </ul>
-                </div>
-
-                <div class="tech-group">
-                    <h4>Dados & Visualização</h4>
-                    <ul>
-                        <li>Matplotlib</li>
-                        <li>ReportLab (PDF)</li>
-                        <li>JSON</li>
-                        <li>SQLite3</li>
-                    </ul>
-                </div>
-
-                <div class="tech-group">
-                    <h4>Deployment</h4>
-                    <ul>
-                        <li>Docker & Compose</li>
-                        <li>GitHub Actions</li>
-                        <li>Nginx</li>
-                        <li>Gunicorn</li>
-                    </ul>
-                </div>
-
-                <div class="tech-group">
-                    <h4>Desenvolvimento</h4>
-                    <ul>
-                        <li>Git & GitHub</li>
-                        <li>Pytest</li>
-                        <li>Logging estruturado</li>
-                        <li>Type hints</li>
-                    </ul>
-                </div>
-
-                <div class="tech-group tech-group-supabase">
-                    <h4>🚀 Roadmap - Supabase Stack (Fase 8)</h4>
-                    <ul>
-                        <li><strong>PostgreSQL</strong> (12+)</li>
-                        <li>Row-Level Security (RLS)</li>
-                        <li>Supabase Auth (OAuth2)</li>
-                        <li>Supabase Vector (pgvector)</li>
-                        <li>Supabase Edge Functions</li>
-                        <li>Supabase Realtime (WebSocket)</li>
-                    </ul>
-                </div>
-
-                <div class="tech-group tech-group-frontend">
-                    <h4>🚀 Roadmap - Frontend Moderno (Fase 8)</h4>
-                    <ul>
-                        <li>Next.js 14 (App Router)</li>
-                        <li>TypeScript 5+</li>
-                        <li>TailwindCSS + shadcn/ui</li>
-                        <li>React Query + Zustand</li>
-                        <li>Vercel Deployment</li>
-                    </ul>
-                </div>
-
-                <div class="tech-group tech-group-mobile">
-                    <h4>🚀 Roadmap - Mobile (Fase 8)</h4>
-                    <ul>
-                        <li>React Native (Expo)</li>
-                        <li>Native Navigation Stack</li>
-                        <li>Realm Offline Storage</li>
-                        <li>Push Notifications</li>
-                        <li>Apple App Store & Google Play</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="architecture-diagram" id="architectureDiagram">
-                <h3>Fluxo Técnico da Arquitetura - RAG + Generative AI</h3>
-                <div class="diagram-box diagram-collapsed">
-                    <pre>┌─────────────────────────────────────────────────────────────────┐
+                    <section class="history-block">
+                        <h3>Fluxo técnico descrito anteriormente — RAG + Generative AI</h3>
+                        <pre class="history-diagram">┌─────────────────────────────────────────────────────────────────┐
 │                    Frontend (Jinja2 + Vanilla JS)                  │
 │                    ├─ form_input() [Anamnese/Objetivos]           │
 │                    └─ POST /api/gerar-ficha {json}                 │
@@ -363,350 +324,66 @@
     │ SQLite  │   │PDF Export│   │API Response  │
     │  Save   │   │(ReportLab)  │(JSON + JWT)  │
     │ ficha   │   │          │   │              │
-    └────────┘    └──────────┘   └──────────────┘</pre>
+    └─────────┘    └──────────┘   └──────────────┘</pre>
+                    </section>
+
+                    <section class="history-block">
+                        <h3>Roadmap Público — fases da versão anterior</h3>
+                        <p>Veja as fases completadas e o que vem pela frente. Colaboradores podem assumir tarefas em Fases 4-8.</p>
+                        <div class="history-grid history-roadmap">
+                            <article><h4>Fase 1 ✅</h4><p><code>run_training.py</code> - Periodização Jack Daniels Formula</p><ul><li>Cálculo de VDOT e velocidades (E, T, I, R, S)</li><li>Algoritmo de distribuição semanal</li></ul><span>v1.0</span></article>
+                            <article><h4>Fase 2 ✅</h4><p><code>export_pdf.py</code> + <code>visualizations.py</code></p><ul><li>ReportLab para geração de PDF</li><li>Matplotlib para gráficos de progressão (Volume Load, RPE)</li></ul><span>v1.5</span></article>
+                            <article><h4>Fase 3 ✅</h4><p><code>rag_engine.py</code> + <code>gemini_adapter.py</code></p><ul><li>FAISS indexing para busca semântica de exercícios</li><li>ChromaDB para persistência de embeddings</li><li>Gemini 2.5 Flash para personalizacao dinâmica</li></ul><span>v2.0</span></article>
+                            <article><h4>Fase 3.5 ✅</h4><p><code>templates/*</code> + <code>styles.css</code> refactor</p><ul><li>Design System (Bootstrap 5 + Utility CSS)</li><li>CSS Variables para Dark/Light Mode</li><li>Responsive GRID 12 cols</li></ul><span>v2.1</span></article>
+                            <article><h4>Fase 4 🔄</h4><p><code>feedback_loop.py</code> + Real-time Adaptation</p><ul><li>WebSocket para feedback de RPE em tempo real</li><li>Fine-tuning de prompts baseado em histórico</li><li>Armazenamento de preferências (JSON)</li></ul><span>Q1 2026</span></article>
+                            <article><h4>Fase 5 🔐</h4><p><code>security_audit.py</code> + Conformidade OWASP &amp; LGPD</p><ul><li>Auditoria OWASP Top 10 2021</li><li>Conformidade LGPD, ISO 27001 e SOC II</li><li>Secret scanning e análise criptográfica</li><li>Threat modeling (STRIDE Framework)</li><li>Testes de penetração e hardening</li><li>Documentação de compliance e policies</li></ul><span>Q1 2026 (Março)</span></article>
+                            <article><h4>Fase 6 🚀</h4><p><code>intervals_api.py</code> + Activity Tracking Integration</p><ul><li>Integração OAuth 2.0 com Intervals.icu</li><li>Sincronização de atividades (FIT, TCX, GPX)</li><li>Wellness data (peso, RHR, HRV, stress levels)</li><li>Webhooks para dados em tempo real</li><li>Gerenciamento de workout plans</li><li>Dashboard de performance integrado</li></ul><span>Q2 2026 (Abril-Junho)</span></article>
+                            <article><h4>Fase 7 📋</h4><p><code>api/</code> refactor + <code>auth_manager.py</code></p><ul><li>Flask-RESTful + OpenAPI (Swagger)</li><li>JWT com refresh tokens (RS256)</li><li>Rate limiting (redis-backed)</li><li>CORS + API key management</li></ul><span>Q1-Q2 2026</span></article>
+                            <article><h4>Fase 8 📋</h4><p><code>analytics_engine.py</code> + Business Intelligence</p><ul><li>Aggregação de dados com Pandas</li><li>Plotly para dashboards interativos</li><li>PostgreSQL queries otimizadas</li></ul><span>Q2 2026</span></article>
+                            <article><h4>Fase 9 📋</h4><p><code>rbac.py</code> + <code>organizations_manager.py</code></p><ul><li>Role-Based Access Control (RBAC)</li><li>Multi-tenant architecture</li><li>Team collaboration features (SharedFichas)</li></ul><span>Q2-Q3 2026</span></article>
+                            <article><h4>Fase 10 📋</h4><p><code>next.js</code> + <code>react-native</code> + <code>supabase-migration</code></p><ul><li>Next.js 14 SSR + ISR</li><li>React Native para iOS/Android</li><li>Supabase (PostgreSQL + Auth + RLS)</li><li>CI/CD pipeline completo (GitHub Actions)</li></ul><span>Q3-Q4 2026</span></article>
+                        </div>
+                        <div class="history-cta"><p><strong>Interessado em colaborar?</strong></p><p>Entre em contato para mais detalhes sobre as fases futuras e como você pode contribuir.</p><p><strong>“Saiba Como Colaborar”</strong></p></div>
+                    </section>
+
+                    <section class="history-block">
+                        <h3>Contato e comunidade</h3>
+                        <p>Interessado em usar Beta Staff ou colaborar no projeto? Nos envie uma mensagem!</p>
+                        <ul><li>Email — Para dúvidas gerais e solicitação de acesso</li><li>GitHub Discussions — Perguntas técnicas e ideias: Disponível no repositório privado</li><li>Repositório — Acesso privado para colaboradores: Convite exclusivo</li></ul>
+                        <p>Formulário de Contato · Nome · Email · Interessado em: Usar a plataforma, Colaborar no projeto, Pesquisa acadêmica ou Outro · Mensagem · Enviar</p>
+                        <p>“Quem ensina colaborando, evolui continuamente”.</p>
+                        <p>© 2026 ♾️ Colab Developer. Todos os direitos reservados.</p>
+                        <p>Licenciado sob MIT + CC-BY-4.0. Repositório privado • Acesso restrito a colaboradores.</p>
+                    </section>
                 </div>
-                <button class="diagram-toggle-btn" id="diagramToggle" aria-expanded="false" aria-controls="architectureDiagram">
-                    <i class="bi bi-chevron-down"></i>
-                    <span>Mostrar mais</span>
-                </button>
-            </div>
-    </section>
+            </details>
+        </section>
+    </main>
 
-    <!-- ROADMAP -->
-    <section id="roadmap" class="roadmap">
-        <div class="container">
-            <h2>Roadmap Público</h2>
-            <p class="roadmap-intro">
-                Veja as fases completadas e o que vem pela frente. Colaboradores podem assumir tarefas em Fases 4-8.
-            </p>
-
-            <div class="phases-timeline">
-                <div class="phase completed">
-                    <h4>Fase 1 ✅</h4>
-                    <p><code>run_training.py</code> - Periodização Jack Daniels Formula</p>
-                    <ul>
-                        <li>• Cálculo de VDOT e velocidades (E, T, I, R, S)</li>
-                        <li>• Algoritmo de distribuição semanal</li>
-                    </ul>
-                    <span class="badge badge-done">v1.0</span>
-                </div>
-
-                <div class="phase completed">
-                    <h4>Fase 2 ✅</h4>
-                    <p><code>export_pdf.py</code> + <code>visualizations.py</code></p>
-                    <ul>
-                        <li>• ReportLab para geração de PDF</li>
-                        <li>• Matplotlib para gráficos de progressão (Volume Load, RPE)</li>
-                    </ul>
-                    <span class="badge badge-done">v1.5</span>
-                </div>
-
-                <div class="phase completed">
-                    <h4>Fase 3 ✅</h4>
-                    <p><code>rag_engine.py</code> + <code>gemini_adapter.py</code></p>
-                    <ul>
-                        <li>• FAISS indexing para busca semântica de exercícios</li>
-                        <li>• ChromaDB para persistência de embeddings</li>
-                        <li>• Gemini 2.5 Flash para personalizacao dinâmica</li>
-                    </ul>
-                    <span class="badge badge-done">v2.0</span>
-                </div>
-
-                <div class="phase completed">
-                    <h4>Fase 3.5 ✅</h4>
-                    <p><code>templates/*</code> + <code>styles.css</code> refactor</p>
-                    <ul>
-                        <li>• Design System (Bootstrap 5 + Utility CSS)</li>
-                        <li>• CSS Variables para Dark/Light Mode</li>
-                        <li>• Responsive GRID 12 cols</li>
-                    </ul>
-                    <span class="badge badge-done">v2.1</span>
-                </div>
-
-                <div class="phase in-progress">
-                    <h4>Fase 4 🔄</h4>
-                    <p><code>feedback_loop.py</code> + Real-time Adaptation</p>
-                    <ul>
-                        <li>• WebSocket para feedback de RPE em tempo real</li>
-                        <li>• Fine-tuning de prompts baseado em histórico</li>
-                        <li>• Armazenamento de preferências (JSON)</li>
-                    </ul>
-                    <span class="badge badge-progress">Q1 2026</span>
-                </div>
-
-                <div class="phase in-progress">
-                    <h4>Fase 5 🔐</h4>
-                    <p><code>security_audit.py</code> + Conformidade OWASP & LGPD</p>
-                    <ul>
-                        <li>• Auditoria OWASP Top 10 2021</li>
-                        <li>• Conformidade LGPD, ISO 27001 e SOC II</li>
-                        <li>• Secret scanning e análise criptográfica</li>
-                        <li>• Threat modeling (STRIDE Framework)</li>
-                        <li>• Testes de penetração e hardening</li>
-                        <li>• Documentação de compliance e policies</li>
-                    </ul>
-                    <span class="badge badge-progress">Q1 2026 (Março)</span>
-                </div>
-
-                <div class="phase planned">
-                    <h4>Fase 6 🚀</h4>
-                    <p><code>intervals_api.py</code> + Activity Tracking Integration</p>
-                    <ul>
-                        <li>• Integração OAuth 2.0 com Intervals.icu</li>
-                        <li>• Sincronização de atividades (FIT, TCX, GPX)</li>
-                        <li>• Wellness data (peso, RHR, HRV, stress levels)</li>
-                        <li>• Webhooks para dados em tempo real</li>
-                        <li>• Gerenciamento de workout plans</li>
-                        <li>• Dashboard de performance integrado</li>
-                    </ul>
-                    <span class="badge badge-planned">Q2 2026 (Abril-Junho)</span>
-                </div>
-
-                <div class="phase planned">
-                    <h4>Fase 7 📋</h4>
-                    <p><code>api/</code> refactor + <code>auth_manager.py</code></p>
-                    <ul>
-                        <li>• Flask-RESTful + OpenAPI (Swagger)</li>
-                        <li>• JWT com refresh tokens (RS256)</li>
-                        <li>• Rate limiting (redis-backed)</li>
-                        <li>• CORS + API key management</li>
-                    </ul>
-                    <span class="badge badge-planned">Q1-Q2 2026</span>
-                </div>
-
-                <div class="phase planned">
-                    <h4>Fase 8 📋</h4>
-                    <p><code>analytics_engine.py</code> + Business Intelligence</p>
-                    <ul>
-                        <li>• Aggregação de dados com Pandas</li>
-                        <li>• Plotly para dashboards interativos</li>
-                        <li>• PostgreSQL queries otimizadas</li>
-                    </ul>
-                    <span class="badge badge-planned">Q2 2026</span>
-                </div>
-
-                <div class="phase planned">
-                    <h4>Fase 9 📋</h4>
-                    <p><code>rbac.py</code> + <code>organizations_manager.py</code></p>
-                    <ul>
-                        <li>• Role-Based Access Control (RBAC)</li>
-                        <li>• Multi-tenant architecture</li>
-                        <li>• Team collaboration features (SharedFichas)</li>
-                    </ul>
-                    <span class="badge badge-planned">Q2-Q3 2026</span>
-                </div>
-
-                <div class="phase planned">
-                    <h4>Fase 10 📋</h4>
-                    <p><code>next.js</code> + <code>react-native</code> + <code>supabase-migration</code></p>
-                    <ul>
-                        <li>• Next.js 14 SSR + ISR</li>
-                        <li>• React Native para iOS/Android</li>
-                        <li>• Supabase (PostgreSQL + Auth + RLS)</li>
-                        <li>• CI/CD pipeline completo (GitHub Actions)</li>
-                    </ul>
-                    <span class="badge badge-planned">Q3-Q4 2026</span>
-                </div>
-            </div>
-
-            <div class="roadmap-cta">
-                <p><strong>Interessado em colaborar?</strong></p>
-                <p>Entre em contato para mais detalhes sobre as fases futuras e como você pode contribuir.</p>
-                <a href="#contact" class="btn btn-success">
-                    <i class="bi bi-hand-thumbs-up"></i> Saiba Como Colaborar
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Entre em Contato</h2>
-            <p class="contact-intro">
-                Interessado em usar Beta Staff ou colaborar no projeto? Nos envie uma mensagem!
-            </p>
-
-            <div class="contact-methods">
-                <div class="contact-card">
-                    <h4>📧 Email</h4>
-                    <p>Para dúvidas gerais e solicitação de acesso:</p>
-                    <a href="mailto:atendimento@rcstorestaff.com.br" class="contact-link">atendimento@rcstorestaff.com.br</a>
-                </div>
-
-                <div class="contact-card">
-                    <h4>💬 GitHub Discussions</h4>
-                    <p>Perguntas técnicas e ideias:</p>
-                    <span class="contact-link">Disponível no repositório privado</span>
-                </div>
-
-                <div class="contact-card">
-                    <h4>🔐 Repositório</h4>
-                    <p>Acesso privado para colaboradores:</p>
-                    <span class="contact-link">Convite exclusivo</span>
-                </div>
-            </div>
-
-            <div class="contact-form">
-                <h3>Formulário de Contato</h3>
-                <form id="demo-form" action="https://formspree.io/f/xqedjwep" method="POST">
-                    <div class="form-group">
-                        <label for="name">Nome:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="interest">Interessado em:</label>
-                        <select id="interest" name="interest">
-                            <option value="">-- Selecione --</option>
-                            <option value="use">Usar a plataforma</option>
-                            <option value="collaborate">Colaborar no projeto</option>
-                            <option value="research">Pesquisa acadêmica</option>
-                            <option value="other">Outro</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Mensagem:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="g-recaptcha" data-sitekey="6LfxbYUsAAAAAB4scfTJ9kRqIRITO_PxOwAgs7VU" data-callback="onRecaptchaSuccess"></div>
-                    </div>
-
-                    <button type="submit" class="btn btn-success" id="submitBtn" disabled>
-                        <i class="bi bi-send"></i> Enviar
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Colab Developer <img src="images-favicon/colab.png" alt="Colab" style="margin-left: 5px; height: 28px; vertical-align: middle;"></h4>
-                    <p>"Quem ensina colaborando, evolui continuamente".
-                </div>
-
-                <div class="footer-section">
-                    <h4>Recursos</h4>
-                    <ul>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#architecture">Arquitetura</a></li>
-                        <li><a href="#roadmap">Roadmap</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Comunidade</h4>
-                    <ul>
-                        <li><a href="https://github.com/rodrigochavesoa" target="_blank"><i class="bi bi-github"></i> GitHub</a></li>
-                        <li><a href="https://linkedin.com/in/rodrigochavesoa" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a></li>
-                        <li><a href="https://behance.net/rodrigochavesoa" target="_blank"><i class="bi bi-briefcase"></i> Behance</a></li>
-                        <li><a href="https://instagram.com/pontochavedesign" target="_blank"><i class="bi bi-instagram"></i> Instagram</a></li>
-                        <li><a href="https://www.youtube.com/@colabdeveloper" target="_blank"><i class="bi bi-youtube"></i> Youtube</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="legal.html#privacy">Política de Privacidade</a></li>
-                        <li><a href="legal.html#terms">Termos de Serviço</a></li>
-                        <li><a href="legal.html#license">Licença (MIT + CC-BY)</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4 style="font-size: 13px; font-weight: 500; opacity: 0.8;">Direitos & Licença</h4>
-                    <p style="font-size: 12px; line-height: 1.6;">
-                        &copy; 2026 ♾️ Colab Dveloper. Todos os direitos reservados.
-                    </p>
-                    <p style="font-size: 12px; line-height: 1.6;">
-                        Licenciado sob MIT + CC-BY-4.0. Repositório privado • Acesso restrito a colaboradores.
-                    </p>
-                </div>
-            </div>
-
-            <div class="footer-bottom" style="display: none;">
-                    <p>&copy; 2026 ♾️ Colab Developer. Todos os direitos reservados.</p>
-                <p>Licenciado sob MIT + CC-BY-4.0. Repositório privado • Acesso restrito a colaboradores.</p>
-            </div>
-        </div>
+        <div class="footer-inner"><a href="#overview" class="footer-brand"><span class="logo-mark">∞</span> Colab Developer</a><p>“Quem ensina colaborando, evolui continuamente”.</p><div class="footer-links"><a href="legal.html#privacy">Privacidade</a><a href="legal.html#terms">Termos</a><a href="legal.html#license">Licença</a></div><small>© 2026 Colab Developer · Projeto colaborativo</small></div>
     </footer>
 
-    <!-- BOTTOM TAB BAR (Mobile Navigation) -->
-    <nav class="bottom-tab-bar" id="bottomTabBar">
-        <a href="#features" class="tab-item" data-section="features" aria-label="Features">
-            <span class="tab-icon">🏠</span>
-            <span class="tab-label">Features</span>
-        </a>
-        <a href="#architecture" class="tab-item" data-section="architecture" aria-label="Arquitetura">
-            <span class="tab-icon">🏗️</span>
-            <span class="tab-label">Stack</span>
-        </a>
-        <a href="#roadmap" class="tab-item" data-section="roadmap" aria-label="Roadmap">
-            <span class="tab-icon">📋</span>
-            <span class="tab-label">Roadmap</span>
-        </a>
-        <a href="#contact" class="tab-item" data-section="contact" aria-label="Contato">
-            <span class="tab-icon">💬</span>
-            <span class="tab-label">Contato</span>
-        </a>
-        <button class="tab-item tab-more" id="tabMore" aria-label="Mais opções" aria-expanded="false" aria-controls="moreMenu">
-            <span class="tab-icon">⋯</span>
-            <span class="tab-label">Mais</span>
-        </button>
+    <nav class="bottom-tab-bar" id="bottomTabBar" aria-label="Navegação mobile">
+        <a href="#features" class="tab-item" data-section="features" aria-label="Projetos"><span class="tab-icon"><i class="bi bi-grid-1x2"></i></span><span class="tab-label">Projetos</span></a>
+        <a href="#architecture" class="tab-item" data-section="architecture" aria-label="Tecnologias"><span class="tab-icon"><i class="bi bi-stack"></i></span><span class="tab-label">Stack</span></a>
+        <a href="#roadmap" class="tab-item" data-section="roadmap" aria-label="Roadmap"><span class="tab-icon"><i class="bi bi-signpost-2"></i></span><span class="tab-label">Roadmap</span></a>
+        <a href="#contact" class="tab-item" data-section="contact" aria-label="Contato"><span class="tab-icon"><i class="bi bi-chat-dots"></i></span><span class="tab-label">Contato</span></a>
+        <button class="tab-item tab-more" id="tabMore" aria-label="Mais opções" aria-expanded="false" aria-controls="moreMenu"><span class="tab-icon">⋯</span><span class="tab-label">Mais</span></button>
     </nav>
 
-    <!-- MORE MENU (Dropdown for additional options) -->
     <div class="more-menu" id="moreMenu" hidden>
-        <a href="legal.html#privacy" class="more-item">
-            <i class="bi bi-shield-lock"></i>
-            <span>Privacidade</span>
-        </a>
-        <a href="legal.html#terms" class="more-item">
-            <i class="bi bi-file-text"></i>
-            <span>Termos</span>
-        </a>
-        <a href="https://github.com/rodrigochavesoa" target="_blank" class="more-item" rel="noopener noreferrer">
-            <i class="bi bi-github"></i>
-            <span>GitHub</span>
-        </a>
-        <button class="more-item" id="themeToggle" aria-label="Alternar tema escuro">
-            <i class="bi bi-moon"></i>
-            <span>Tema Escuro</span>
-        </button>
+        <a href="legal.html#privacy" class="more-item"><i class="bi bi-shield-lock"></i><span>Privacidade</span></a>
+        <a href="legal.html#terms" class="more-item"><i class="bi bi-file-text"></i><span>Termos</span></a>
+        <a href="https://github.com/rodrigochavesoa" target="_blank" rel="noopener noreferrer" class="more-item"><i class="bi bi-github"></i><span>GitHub</span></a>
+        <button class="more-item" id="themeToggle" aria-label="Alternar tema"><i class="bi bi-moon"></i><span>Tema escuro</span></button>
     </div>
 
-    <!-- COMMAND BAR (CMD + K) -->
     <div class="command-bar-overlay" id="commandBarOverlay" hidden></div>
-    <div class="command-bar" id="commandBar" hidden>
-        <div class="command-bar-header">
-            <input 
-                type="text" 
-                class="command-input" 
-                id="commandInput" 
-                placeholder="Ir para..." 
-                autocomplete="off"
-                aria-label="Buscar comandos"
-            >
-            <span class="command-hint">ESC</span>
-        </div>
+    <div class="command-bar" id="commandBar" hidden role="dialog" aria-modal="true" aria-label="Navegar pelo site">
+        <div class="command-bar-header"><input type="text" class="command-input" id="commandInput" placeholder="Ir para..." autocomplete="off" aria-label="Buscar comandos"><span class="command-hint">ESC</span></div>
         <div class="command-results" id="commandResults"></div>
     </div>
-
-    <!-- Google reCAPTCHA v2 -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <script src="scripts.js"></script>
 </body>
