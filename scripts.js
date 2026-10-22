@@ -57,8 +57,9 @@ document.addEventListener('DOMContentLoaded', function() {
 const style = document.createElement('style');
 style.textContent = `
     .nav a.active {
-        color: var(--primary);
-        border-bottom: 2px solid var(--primary);
+        color: #f5f5f4;
+        background: #1c1917;
+        border-bottom: 0;
     }
 `;
 document.head.appendChild(style);
@@ -100,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
             themeToggle.innerHTML = isDark 
                 ? '<i class="bi bi-sun"></i><span>Tema Claro</span>'
                 : '<i class="bi bi-moon"></i><span>Tema Escuro</span>';
+            themeToggle.setAttribute('aria-label', isDark ? 'Ativar tema claro' : 'Ativar tema escuro');
         }
         
         // Atualizar ícone do header
@@ -107,6 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
             themeToggleHeader.innerHTML = isDark 
                 ? '<i class="bi bi-sun"></i>'
                 : '<i class="bi bi-moon"></i>';
+            themeToggleHeader.setAttribute('aria-label', isDark ? 'Ativar tema claro' : 'Ativar tema escuro');
         }
         
         console.log('Theme changed to:', isDark ? 'dark' : 'light');
@@ -299,8 +302,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Command items configuration
     const commands = [
-        { label: 'Features', section: 'features', icon: '🏠', shortcut: '⇧+F' },
-        { label: 'Arquitetura', section: 'architecture', icon: '🏗️', shortcut: '⇧+A' },
+        { label: 'Projetos', section: 'features', icon: '▦', shortcut: '⇧+F' },
+        { label: 'Tecnologias', section: 'architecture', icon: '⌘', shortcut: '⇧+A' },
         { label: 'Roadmap', section: 'roadmap', icon: '📋', shortcut: '⇧+R' },
         { label: 'Contato', section: 'contact', icon: '💬', shortcut: '⇧+C' },
         { label: 'GitHub', url: 'https://github.com/rodrigochavesoa', icon: '🔗', shortcut: 'G' },
@@ -310,6 +313,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let selectedIndex = 0;
     let isCommandBarOpen = false;
+    let previousFocus = null;
 
     // Function to render command results
     const renderResults = (filter = '') => {
@@ -372,6 +376,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Open command bar
     const openCommandBar = () => {
+        previousFocus = document.activeElement;
         commandBar.removeAttribute('hidden');
         commandOverlay.removeAttribute('hidden');
         commandInput.focus();
@@ -388,6 +393,10 @@ document.addEventListener('DOMContentLoaded', function() {
         commandInput.value = '';
         isCommandBarOpen = false;
         document.body.style.overflow = 'auto';
+        if (previousFocus && typeof previousFocus.focus === 'function') {
+            previousFocus.focus();
+        }
+        previousFocus = null;
     };
 
     // Keyboard shortcuts - SEM capture phase para evitar conflitos
@@ -413,6 +422,24 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             e.stopPropagation();
             closeCommandBar();
+            return;
+        }
+
+        if (e.key === 'Tab' && isCommandBarOpen) {
+            const focusable = Array.from(commandBar.querySelectorAll('input:not([disabled]), button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])'))
+                .filter(element => !element.hasAttribute('hidden'));
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (!first) {
+                e.preventDefault();
+                commandInput.focus();
+            } else if (e.shiftKey && (document.activeElement === first || !commandBar.contains(document.activeElement))) {
+                e.preventDefault();
+                last.focus();
+            } else if (!e.shiftKey && (document.activeElement === last || !commandBar.contains(document.activeElement))) {
+                e.preventDefault();
+                first.focus();
+            }
             return;
         }
 
